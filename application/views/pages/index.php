@@ -1,12 +1,13 @@
-<main>
-        <div class="hero_single version_1">
-            <div class="opacity-mask">
-                <div class="container">
-                    <div class="row justify-content-lg-start justify-content-md-center">
-                        <div class="col-xl-6 col-lg-8">
-                            <h1>Delivery or Takeaway Food</h1>
+    <main>
+        <div class="header-video">
+            <div id="hero_video">
+                <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+                    <div class="container">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-xl-7 col-lg-8 col-md-8">
+                                <h1>Delivery or Takeaway Food</h1>
                             <p>The best restaurants at the best price</p>
-                            <form method="post" action="grid-listing-filterscol.html">
+                                <form method="post" action="grid-listing-filterscol.html">
                                 <div class="row no-gutters custom-search-input">
                                     <div class="col-lg-10">
                                         <div class="form-group">
@@ -28,14 +29,15 @@
                                     </ul>
                                 </div>
                             </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- /row -->
                 </div>
             </div>
+            <img src="<?php echo base_url('img/video_fix.png');?>" alt="" class="header-video--media" data-video-src="video/intro" data-teaser-source="video/intro" data-provider="" data-video-width="1920" data-video-height="960">
             <div class="wave hero"></div>
         </div>
-        <!-- /hero_single -->
+        <!-- /header-video -->
 
         <div class="container margin_30_60">
             <div class="main_title center">
