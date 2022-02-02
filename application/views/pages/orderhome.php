@@ -297,7 +297,7 @@
 							    <figure>
 							    	<span class="ribbon off">15% off</span>
 							        <img src="img/lazy-placeholder.png" data-src="img/location_3.jpg" class="img-fluid lazy" alt="">
-							        <a href="detail-restaurant.html" class="strip_info">
+							        <a href="<?php echo base_url('Order/orderdetail');?>" class="strip_info">
 							            <small>Vegetarian</small>
 							            <div class="item_title">
 							                <h3>Vego Life</h3>
