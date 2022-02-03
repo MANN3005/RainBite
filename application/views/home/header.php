@@ -25,6 +25,8 @@
 
     <!-- SPECIFIC CSS -->
     <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
+
 
     <!-- YOUR CUSTOM CSS -->
     <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
@@ -64,21 +66,8 @@
                         <a href="<?php echo base_url('Order');?>" class="show-submenu">Order</a>
                     </li>
                     <li class="submenu">
-                        <a href="#0" class="show-submenu">Other Pages</a>
-                        <ul>
-                            <li><a href="404.html">404 Error</a></li>
-                            <li><a href="help.html">Help and Faq</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="leave-review.html">Leave a review</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="coming_soon/index.html">Coming Soon</a></li>
-                            <li><a href="register.html">Sign Up</a></li>
-                            <li><a href="icon-pack-1.html">Icon Pack 1</a></li>
-                            <li><a href="icon-pack-2.html">Icon Pack 2</a></li>
-                            <li><a href="shortcodes.html">Shortcodes</a></li>
-                        </ul>
+                        <a href="#0" class="show-submenu">Blog</a>
                     </li>
-                    <li><a href="#0">Buy this template</a></li>
                 </ul>
             </nav>
         </div>

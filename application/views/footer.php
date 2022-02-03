@@ -159,6 +159,8 @@
 <script src="<?php echo base_url('assets/js/video_header.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/sticky_sidebar.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/specific_listing.js');?>"></script>
+<script src="<?php echo base_url('assets/js/sticky-kit.min.js');?>"></script>
+<script src="<?php echo base_url('assets/js/specific_detail.js');?>"></script>
 
 <script>
     HeaderVideo.init({

@@ -25,7 +25,7 @@
 
     <!-- SPECIFIC CSS -->
     <link href="<?php echo base_url('assets/css/listing.css');?>" rel="stylesheet">
-
+	<link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
     <!-- YOUR CUSTOM CSS -->
     <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
 
@@ -58,64 +58,15 @@
 	            </div>
 	            <ul>
 	                <li class="submenu">
-	                    <a href="#0" class="show-submenu">Home</a>
-	                    <ul>
-	                        <li><a href="index.html">Address Autocomplete</a></li>
-	                        <li><a href="index-2.html">Search by Keyword</a></li>
-	                        <li><a href="index-3.html">Home Version 2</a></li>
-	                        <li><a href="index-4.html">Video Background</a></li>
-	                        <li><a href="index-5.html">GDPR Cookie Bar EU Law</a></li>
-	                        <li><a href="header-user-logged.html">Header User Logged</a></li>
-	                        <li><a href="header-cart-top.html">Header Cart Top</a></li>
-	                    </ul>
+	                    <a href="<?php echo base_url('Home');?>" class="show-submenu">Home</a>
 	                </li>
 	                <li class="submenu">
-	                    <a href="#0" class="show-submenu">Listing</a>
-	                    <ul>
-	                        <li class="third-level"><a href="#0">List pages</a>
-	                            <ul>
-	                                <li><a href="grid-listing-filterscol.html">List default</a></li>
-	                                <li><a href="grid-listing-filterscol-map.html">List with map</a></li>
-	                                <li><a href="listing-map.html">List side map</a></li>
-	                                <li><a href="grid-listing-masonry.html">List Masonry Filter</a></li>
-	                            </ul>
-	                        </li>
-	                        <li class="third-level"><a href="#0">Detail pages</a>
-	                            <ul>
-	                                <li><a href="detail-restaurant.html">Detail page 1</a></li>
-	                                <li><a href="detail-restaurant-2.html">Detail page 2</a></li>
-	                                <li><a href="detail-restaurant-3.html">Detail page 3</a></li>
-	                            </ul>
-	                        </li>
-	                        <li class="third-level"><a href="#0">OpenStreetMap</a>
-	                            <ul>
-	                                <li><a href="grid-listing-filterscol-openstreetmap.html">List with map</a></li>
-	                                <li><a href="listing-map-openstreetmap.html">List side map</a></li>
-	                                <li><a href="grid-listing-masonry-openstreetmap.html">List Masonry Filter</a></li>
-	                            </ul>
-	                        </li>
-	                        <li><a href="submit-restaurant.html">Submit Restaurant</a></li>
-	                        <li><a href="submit-rider.html">Submit Rider</a></li>
-	                        <li><a href="order.html">Order</a></li>
-	                        <li><a href="confirm.html">Confirm Order</a></li>
-	                    </ul>
+	                    <a href="#0" class="show-submenu">Order</a>
 	                </li>
 	                <li class="submenu">
-	                    <a href="#0" class="show-submenu">Other Pages</a>
-	                    <ul>
-	                        <li><a href="404.html">404 Error</a></li>
-	                        <li><a href="help.html">Help and Faq</a></li>
-	                        <li><a href="blog.html">Blog</a></li>
-	                        <li><a href="leave-review.html">Leave a review</a></li>
-	                        <li><a href="contacts.html">Contacts</a></li>
-	                        <li><a href="coming_soon/index.html">Coming Soon</a></li>
-	                        <li><a href="register.html">Sign Up</a></li>
-	                        <li><a href="icon-pack-1.html">Icon Pack 1</a></li>
-	                        <li><a href="icon-pack-2.html">Icon Pack 2</a></li>
-	                        <li><a href="shortcodes.html">Shortcodes</a></li>
-	                    </ul>
+	                    <a href="#0" class="show-submenu">Blog</a>
+	                    
 	                </li>
-	                <li><a href="#0">Buy this template</a></li>
 	            </ul>
 	        </nav>
 	    </div>

@@ -23,15 +23,15 @@
 	            <div class="col-lg-4">
 	                <div class="pictures magnific-gallery clearfix">
 	                    <figure>
-	                        <a href="img/detail_gallery/detail_1.jpg" title="Photo title" data-effect="mfp-zoom-in">
-	                            <img src="img/thumb_detail_1.jpg" data-src="img/thumb_detail_1.jpg" class="lazy loaded" alt="" data-was-processed="true">
+	                        <a href="<?php echo base_url('assets/img/detail_gallery/detail_1.jpg');?>" title="Photo title" data-effect="mfp-zoom-in">
+	                            <img src="<?php echo base_url('assets/img/thumb_detail_1.jpg');?>" data-src="img/thumb_detail_1.jpg" class="lazy loaded" alt="" data-was-processed="true">
 	                        </a>
 	                    </figure>
-	                    <figure><a href="img/detail_gallery/detail_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/thumb_detail_2.jpg" data-src="img/thumb_detail_2.jpg" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
-	                    <figure><a href="img/detail_gallery/detail_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/thumb_detail_3.jpg" data-src="img/thumb_detail_3.jpg" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
-	                    <figure><a href="img/detail_gallery/detail_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/thumb_detail_4.jpg" data-src="img/thumb_detail_4.jpg" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
-	                    <figure><a href="img/detail_gallery/detail_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/thumb_detail_6.jpg" data-src="img/thumb_detail_6.jpg" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
-	                    <figure><a href="img/detail_gallery/detail_5.jpg" title="Photo title" data-effect="mfp-zoom-in"><span class="d-flex align-items-center justify-content-center">+10</span><img src="img/thumb_detail_5.jpg" data-src="img/thumb_detail_5.jpg" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
+	                    <figure><a href="<?php echo base_url('assets/img/detail_gallery/detail_2.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/thumb_detail_2.jpg');?>" data-src="<?php echo base_url('assets/img/thumb_detail_2.jpg');?>" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
+	                    <figure><a href="<?php echo base_url('assets/img/detail_gallery/detail_3.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/thumb_detail_3.jpg');?>" data-src="<?php echo base_url('assets/img/thumb_detail_3.jpg');?>" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
+	                    <figure><a href="<?php echo base_url('assets/img/detail_gallery/detail_4.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/thumb_detail_4.jpg');?>" data-src="<?php echo base_url('assets/img/thumb_detail_4.jpg');?>" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
+	                    <figure><a href="<?php echo base_url('assets/img/detail_gallery/detail_4.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/thumb_detail_6.jpg');?>" data-src="<?php echo base_url('assets/img/thumb_detail_6.jpg');?>" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
+	                    <figure><a href="<?php echo base_url('assets/img/detail_gallery/detail_5.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><span class="d-flex align-items-center justify-content-center">+10</span><img src="<?php echo base_url('assets/img/thumb_detail_5.jpg');?>?" data-src="<?php echo base_url('assets/img/thumb_detail_5.jpg');?>" class="lazy loaded" alt="" data-was-processed="true"></a></figure>
 	                </div>
 	            </div>
 	        </div>
@@ -78,7 +78,7 @@
 	                                    <tr>
 	                                        <td class="d-md-flex align-items-center">
 	                                            <figure>
-	                                            	<a href="img/menu_item_large_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-1.jpg" alt="thumb" class="lazy"></a>
+	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_1.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-1.jpg');?>" alt="thumb" class="lazy"></a>
 	                                            </figure>
 	                                            <div class="flex-md-column">
 	                                                <h4>1. Mexican Enchiladas</h4>
@@ -138,7 +138,7 @@
 	                                    <tr>
 	                                        <td class="d-md-flex align-items-center">
 	                                            <figure>
-	                                            	<a href="img/menu_item_large_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-2.jpg" alt="thumb" class="lazy"></a>
+	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_2.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-2.jpg');?>" alt="thumb" class="lazy"></a>
 	                                            	</figure>
 	                                            <div class="flex-md-column">
 	                                                <h4>2. Fajitas</h4>
@@ -198,7 +198,7 @@
 	                                    <tr>
 	                                        <td class="d-md-flex align-items-center">
 	                                            <figure>
-	                                            	<a href="img/menu_item_large_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-3.jpg" alt="thumb" class="lazy"></a>
+	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_3.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-3.jpg');?>" alt="thumb" class="lazy"></a>
 	                                            </figure>
 	                                            <div class="flex-md-column">
 	                                                <h4>3. Royal Fajitas</h4>

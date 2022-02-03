@@ -7,7 +7,5 @@ class Home extends CI_Controller {
         $this->load->view('pages/index');
         $this->load->view('home/footer');
 	}
-    public function temp(){
-        
-    }
+    
 }
