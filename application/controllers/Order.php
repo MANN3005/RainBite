@@ -13,5 +13,19 @@ class Order extends CI_Controller {
 
 
     }
+    public function ordersummary(){      
+        $this->load->view('header');
+        $this->load->view('pages/ordersummary');
+        $this->load->view('footer');
+
+
+    }
+    public function ConfirmOrder(){      
+        $this->load->view('header');
+        $this->load->view('pages/ConfirmOrder');
+        $this->load->view('footer');
+
+
+    }
 }
 ?>

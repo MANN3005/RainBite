@@ -26,7 +26,10 @@
     <!-- SPECIFIC CSS -->
     <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
-
+    <link href="<?php echo base_url('assets/css/submit.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/blog.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/help.css');?>" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
@@ -66,7 +69,7 @@
                         <a href="<?php echo base_url('Order');?>" class="show-submenu">Order</a>
                     </li>
                     <li class="submenu">
-                        <a href="#0" class="show-submenu">Blog</a>
+                        <a href="<?php echo base_url('Blog');?>" class="show-submenu">Blog</a>
                     </li>
                 </ul>
             </nav>

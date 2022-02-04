@@ -26,6 +26,10 @@
     <!-- SPECIFIC CSS -->
     <link href="<?php echo base_url('assets/css/listing.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/submit.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/blog.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/help.css');?>" rel="stylesheet">
     <!-- YOUR CUSTOM CSS -->
     <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
 
@@ -63,8 +67,17 @@
 	                <li class="submenu">
 	                    <a href="#0" class="show-submenu">Order</a>
 	                </li>
+					<li class="submenu">
+	                    <a href="<?php echo base_url('Order/ordersummary');?>" class="show-submenu">OrderSummary</a>
+	                </li>
+					<li class="submenu">
+	                    <a href="<?php echo base_url('SubmitRestaurant');?>" class="show-submenu">SubmitResto</a>
+	                </li>
+					<li class="submenu">
+	                    <a href="<?php echo base_url('HelpAndFaq');?>" class="show-submenu">HelpAndFaq</a>
+	                </li>
 	                <li class="submenu">
-	                    <a href="#0" class="show-submenu">Blog</a>
+	                    <a href="<?php echo base_url('Blog');?>" class="show-submenu">Blog</a>
 	                    
 	                </li>
 	            </ul>

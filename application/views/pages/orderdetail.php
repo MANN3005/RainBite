@@ -771,7 +771,7 @@
 	                            </div>
 	                            <!-- /dropdown -->
 	                            <div class="btn_1_mobile">
-	                                <a href="booking.html" class="btn_1 gradient full-width mb_5">Order Now</a>
+	                                <a href="<?php echo base_url('Order/ordersummary');?>" class="btn_1 gradient full-width mb_5">Order Now</a>
 	                                <div class="text-center"><small>No money charged on this steps</small></div>
 	                            </div>
 	                        </div>
