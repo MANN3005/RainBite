@@ -43,7 +43,7 @@
 	        </a>
 	        <nav class="main-menu">
 	            <div id="header_menu">
-	                <a href="#0" class="open_close">
+	                <a href="<?php echo base_url('Home');?>" class="open_close">
 	                    <i class="icon_close"></i><span>Menu</span>
 	                </a>
 	                <a href="index.html"><img src="img/logo.svg" width="162" height="35" alt=""></a>
@@ -53,20 +53,10 @@
 	                    <a href="<?php echo base_url('Home');?>" class="show-submenu">Home</a>
 	                </li>
 	                <li class="submenu">
-	                    <a href="#0" class="show-submenu">Order</a>
-	                </li>
-					<li class="submenu">
-	                    <a href="<?php echo base_url('Order/ordersummary');?>" class="show-submenu">OrderSummary</a>
-	                </li>
-					<li class="submenu">
-	                    <a href="<?php echo base_url('SubmitRestaurant');?>" class="show-submenu">SubmitResto</a>
-	                </li>
-					<li class="submenu">
-	                    <a href="<?php echo base_url('HelpAndFaq');?>" class="show-submenu">HelpAndFaq</a>
+	                    <a href="<?php echo base_url('Order');?>" class="show-submenu">Order</a>
 	                </li>
 	                <li class="submenu">
 	                    <a href="<?php echo base_url('Blog');?>" class="show-submenu">Blog</a>
-	                    
 	                </li>
 	            </ul>
 	        </nav>

@@ -8,10 +8,10 @@
                     <div class="collapse dont-collapse-sm links" id="collapse_1">
                         <ul>
                             <li><a href="about.html">About us</a></li>
-                            <li><a href="submit-restaurant.html">Add your restaurant</a></li>
-                            <li><a href="help.html">Help</a></li>
-                            < <li><a href="<?php echo base_url('Home/comingsoon');?>">Coming Soon</a></li
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="<?php echo base_url('SubmitRestaurant');?>">Add your restaurant</a></li>
+                            <li><a href="<?php echo base_url('HelpAndFaq');?>">Help</a></li>
+                            <li><a href="<?php echo base_url('Home/comingsoon');?>">Coming Soon</a></li
+                            ><li><a href="<?php echo base_url('Blog');?>">Blog</a></li>
                             <li><a href="<?php echo base_url('Contact');?>">Contact Us</a></li>
                         </ul>
                     </div>
@@ -20,10 +20,10 @@
                     <h3 data-target="#collapse_2">Categories</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_2">
                         <ul>
-                            <li><a href="grid-listing-filterscol.html">Top Categories</a></li>
-                            <li><a href="grid-listing-filterscol-full-masonry.html">Best Rated</a></li>
-                            <li><a href="grid-listing-filterscol-full-width.html">Best Price</a></li>
-                            <li><a href="grid-listing-filterscol-full-masonry.html">Latest Submissions</a></li>
+                            <li><a href="<?php echo base_url('Order');?>">Top Categories</a></li>
+                            <li><a href="<?php echo base_url('Order');?>">Best Rated</a></li>
+                            <li><a href="<?php echo base_url('Order');?>">Best Price</a></li>
+                            <li><a href="<?php echo base_url('Order');?>">Latest Submissions</a></li> <
                         </ul>
                     </div>
                 </div>
@@ -62,36 +62,14 @@
                 </div>
             </div>
             <!-- /row-->
-            <hr>
             <div class="row add_bottom_25">
                 <div class="col-lg-6">
-                    <ul class="footer-selector clearfix">
-                        <li>
-                            <div class="styled-select lang-selector">
-                                <select>
-                                    <option value="English" selected>English</option>
-                                    <option value="French">French</option>
-                                    <option value="Spanish">Spanish</option>
-                                    <option value="Russian">Russian</option>
-                                </select>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="styled-select currency-selector">
-                                <select>
-                                    <option value="US Dollars" selected>US Dollars</option>
-                                    <option value="Euro">Euro</option>
-                                </select>
-                            </div>
-                        </li>
-                        <li><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php echo base_url('assets/img/cards_all.svg');?>" alt="" width="230" height="35" class="lazy"></li>
-                    </ul>
                 </div>
                 <div class="col-lg-6">
                     <ul class="additional_links">
                         <li><a href="#0">Terms and conditions</a></li>
                         <li><a href="#0">Privacy</a></li>
-                        <li><span>© FooYes</span></li>
+                        <li><span>© RainBite</span></li>
                     </ul>
                 </div>
             </div>

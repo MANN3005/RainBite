@@ -52,7 +52,7 @@
                 </div>
                 <ul>
                     <li class="submenu">
-                        <a href="#0" class="show-submenu">Home</a>
+                        <a href="<?php echo base_url('Home');?>" class="show-submenu">Home</a>
                     </li>
                     <li class="submenu">
                         <a href="<?php echo base_url('Order');?>" class="show-submenu">Order</a>
