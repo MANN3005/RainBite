@@ -10,9 +10,9 @@
                             <li><a href="about.html">About us</a></li>
                             <li><a href="submit-restaurant.html">Add your restaurant</a></li>
                             <li><a href="help.html">Help</a></li>
-                            <li><a href="account.html">My account</a></li>
+                            < <li><a href="<?php echo base_url('Home/comingsoon');?>">Coming Soon</a></li
                             <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="<?php echo base_url('Contact');?>">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

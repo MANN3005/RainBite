@@ -1,3 +1,4 @@
+<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
 <main class="bg_gray">
 		
 		<div class="container margin_60_40">

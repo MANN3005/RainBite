@@ -22,17 +22,6 @@
     <!-- BASE CSS -->
     <link href="<?php echo base_url('assets/css/bootstrap_customized.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
-
-    <!-- SPECIFIC CSS -->
-    <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/submit.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/blog.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/help.css');?>" rel="stylesheet">
-
-    <!-- YOUR CUSTOM CSS -->
-    <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +31,7 @@
             <div id="logo">
                 <a href="index.html">
                 <img src="<?php echo base_url('assets/img/logo.svg');?>" width="162" height="35" alt="" class="logo_normal">
-                    <img src="<?php echo base_url('assets/img/logo_sticky.svg');?>" width="162" height="35" alt="" class="logo_sticky">
+                <img src="<?php echo base_url('assets/img/logo_sticky.svg');?>" width="162" height="35" alt="" class="logo_sticky">
                 </a>
             </div>
             <div class="layer"></div><!-- Opacity Mask Menu Mobile -->

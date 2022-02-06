@@ -1,3 +1,4 @@
+<link href="<?php echo base_url('assets/css/blog.css');?>" rel="stylesheet">
 <main>
 		<div class="page_header blog element_to_stick">
 		    <div class="container">

@@ -19,20 +19,8 @@
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
-    <!-- BASE CSS -->
     <link href="<?php echo base_url('assets/css/bootstrap_customized.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
-
-    <!-- SPECIFIC CSS -->
-    <link href="<?php echo base_url('assets/css/listing.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/submit.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/blog.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
-	<link href="<?php echo base_url('assets/css/help.css');?>" rel="stylesheet">
-    <!-- YOUR CUSTOM CSS -->
-    <link href="<?php echo base_url('assets/css/custom.css');?>" rel="stylesheet">
-
 </head>
 
 <body>

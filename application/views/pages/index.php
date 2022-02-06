@@ -1,4 +1,5 @@
-    <main>
+<link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
+<main>
         <div class="header-video">
             <div id="hero_video">
                 <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">

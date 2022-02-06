@@ -1,3 +1,4 @@
+<link href="<?php echo base_url('assets/css/help.css');?>" rel="stylesheet">
 <main>
 		<div class="hero_single inner_pages background-image" data-background="url(img/hero_general_2.jpg)">
 			<div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">

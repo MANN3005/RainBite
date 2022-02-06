@@ -1,3 +1,5 @@
+<link href="<?php echo base_url('assets/css/detail-page.css');?>" rel="stylesheet">
+
 <main>
 	    <div class="container margin_detail_2">
 	        <div class="row">
@@ -913,7 +915,7 @@
 	                        <!-- /review_card -->
 	                    </div>
 	                    <!-- /reviews -->
-	                    <div class="text-right"><a href="leave-review.html" class="btn_1 gradient">Leave a Review</a></div>
+	                    <div class="text-right"><a href="<?php echo base_url('Review/index');?>" class="btn_1 gradient">Leave a Review</a></div>
 	                </section>
 	                <!-- /section -->
 	            </div>
