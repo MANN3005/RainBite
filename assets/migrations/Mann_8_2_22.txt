@@ -1,0 +1,1 @@
+CREATE TABLE `rainbite`.`contactus` ( `Id` INT(5) NOT NULL AUTO_INCREMENT , `Name` VARCHAR(40) NOT NULL , `Email` VARCHAR(40) NOT NULL , `PhoneNumber` INT(10) NOT NULL , `Message` VARCHAR(255) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB;
