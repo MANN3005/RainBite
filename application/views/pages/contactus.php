@@ -54,22 +54,23 @@
 		    <h5 class="mb_5">Drop Us a Line</h5>
 		    <div class="row">
 		        <div class="col-lg-4 col-md-6 add_bottom_25">
-		            <div id="message-contact"></div>
-			            <form method="post" action="assets/contact.php" id="contactform" autocomplete="off">
+		            <div id="message-contact"><?php echo validation_errors(); ?></div>
+			            <form method="post" action="<?php echo base_url('Contact/contactus');?>"  autocomplete="off">
 			                <div class="form-group">
-			                    <input class="form-control" type="text" placeholder="Name" id="name_contact" name="name_contact">
+			                    <input class="form-control" type="text" placeholder="Name"   name="name" maxlength=40 required value="<?php echo set_value('name'); ?>">
 			                </div>
 			                <div class="form-group">
-			                    <input class="form-control" type="email" placeholder="Email" id="email_contact" name="email_contact">
+			                    <input class="form-control" type="text" placeholder="Email"   name="email" maxlength=40 required value="<?php echo set_value('email'); ?>">
+			                </div>
+							<div class="form-group">
+			                    <input class="form-control" type="text"  placeholder="Phone Number" name="phone_number" maxlength=10 required value="<?php echo set_value('phone_number'); ?>">
 			                </div>
 			                <div class="form-group">
-			                    <textarea class="form-control" style="height: 150px;" placeholder="Message" id="message_contact" name="message_contact"></textarea>
-			                </div>
+			                    <textarea class="form-control"  type ="text"style="height: 150px;" placeholder="Message"  name="message" maxlength=255 required value="<?php echo set_value('message'); ?>"></textarea>
+			                	<span><?php echo form_error('message'); ?></span>
+							</div>
 			                <div class="form-group">
-			                    <input class="form-control" type="text" id="verify_contact" name="verify_contact" placeholder="Are you human? 3 + 1 =">
-			                </div>
-			                <div class="form-group">
-			                    <input class="btn_1 gradient full-width" type="submit" value="Submit" id="submit-contact">
+			                    <input class="btn_1 gradient full-width" type="submit" value="Contact Us  " placeholder = "Send us a Message">
 			                </div>
 			            </form>
 		        	</div>

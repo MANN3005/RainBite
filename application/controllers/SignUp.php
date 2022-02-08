@@ -7,7 +7,6 @@ class SignUp extends CI_Controller {
         $this->load->view('pages/signup');
         // $this->load->view('footer');
 	}
-    
+
    
-    
 }
