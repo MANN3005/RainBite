@@ -21,8 +21,8 @@
 
     <link href="<?php echo base_url('assets/css/bootstrap_customized.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
-</head>
-
+ <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
+ </head>
 <body>
 				
 	<header class="header_in clearfix">
@@ -34,9 +34,57 @@
 	        </div>
 	        <div class="layer"></div><!-- Opacity Mask Menu Mobile -->
 	        <ul id="top_menu">
-	            <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
+	        <li>
+                    <div class="dropdown user clearfix">
+                        <a href="#" data-toggle="dropdown">
+                            <figure><img src="<?php echo base_url('assets/img/avatar1.jpg');?>" alt=""></figure><span>Jhon Doe</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-menu-content">
+                                <ul>
+                                    <li><a href="#0"><i class="icon_cog"></i>Dashboard</a></li>
+                                    <li><a href="#0"><i class="icon_document"></i>Bookings</a></li>
+                                    <li><a href="#0"><i class="icon_heart"></i>Wish List</a></li>
+                                    <li><a href="#0"><i class="icon_key"></i>Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /dropdown -->
+                </li>        
+            <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
 	            <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
-	        </ul>
+				<li>
+                    <div class="dropdown dropdown-cart">
+                        <a href="cart.html" class="cart_bt"><strong>2</strong></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-1.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
+                                    <strong><span>1x Pizza Napoli</span>$12.00</strong>
+                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
+                                </li>
+                                 <li>
+                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-2.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
+                                    <strong><span>1x Hamburgher Maxi</span>$10.00</strong>
+                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
+                                </li>
+                                 <li>
+                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-3.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
+                                    <strong><span>1x Red Wine Bottle</span>$20.00</strong>
+                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
+                                </li>
+                            </ul>
+                            <div class="total_drop">
+                                <div class="clearfix add_bottom_15"><strong>Total</strong><span>$32.00</span></div>
+                                <a href="order.html" class="btn_1 outline">View Cart</a><a href="order.html" class="btn_1">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /dropdown-cart-->
+                </li>
+			
+			</ul>
 	        <!-- /top_menu -->
 	        <a href="#0" class="open_close">
 	            <i class="icon_menu"></i><span>Menu</span>
@@ -58,6 +106,7 @@
 	                <li class="submenu">
 	                    <a href="<?php echo base_url('Blog');?>" class="show-submenu">Blog</a>
 	                </li>
+					
 	            </ul>
 	        </nav>
 	    </div>

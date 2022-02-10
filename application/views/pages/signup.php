@@ -13,7 +13,7 @@
 					<a href="#0" class="social_bt google">Register with Google</a>
 				</div>
             <div class="divider"><span>Or</span></div><?php echo validation_errors(); ?>
-			<form method="post" action="<?php echo base_url('SignUp/usersignup');?>" autocomplete = "off">
+			<form method="post"  action="<?php echo base_url('SignUp/usersignup');?>" autocomplete = "off">
 				<div class="form-group" >
 					<input class="form-control" type="text" placeholder="Name"   name="name" maxlength=40 required value="<?php echo set_value('name');?>">
 					<i class="icon_pencil-edit"></i>
@@ -31,24 +31,18 @@
 					<i class="icon_lock_alt"></i>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="password" id="password2" placeholder="Confirm Password" name="confirmpassword" maxlength=40 required value="<?php echo set_value('confirmpassword');?>">
+					<input class="form-control" type="password" id="password2" placeholder="Confirm Password" name="cpassword" maxlength=40 required value="<?php echo set_value('cpassword');?>">
 					<i class="icon_lock_alt"></i>
 				</div>
 				<div id="pass-info" class="clearfix"></div>
-				<div class="form-group">
-				<input class="btn_1 gradient full-width" type="submit" value="SignUp" placeholder = "Send us a Message">
-				</div>
+				<input class="btn_1 gradient full-width" type="submit"  value="Submit">
 				<div class="text-center mt-2"><small>Already have an acccount? <strong><a href="#0">Sign In</a></strong></small></div>
 			</form>
-			<div class="copy">© 2020 FooYes</div>
+			<div class="copy">© RainBite</div>
 		</aside>
 	</div>
 	<!-- /login -->
-	
-	<!-- SPECIFIC SCRIPTS -->
-		
-  
 <!-- </body> -->
-<script src="<?php echo base_url('assets/js/common_scripts.min.js');?>"></script>
-<script src="<?php echo base_url('assets/js/common_func.js');?>"></script>
-<script src="<?php echo base_url('assets/validate.js');?>"></script>
+ <script src="<?php echo base_url('assets/js/common_scripts.min.js');?>"></script>
+ <script src="<?php echo base_url('assets/js/common_func.js');?>"></script>
+<script src="<?php echo base_url('assets/js/pw_strenght.js');?>"></script>	
