@@ -24,11 +24,13 @@
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
     
+    
 </head>
 
 <body>
                 
     <header class="header clearfix element_to_stick">
+  
         <div class="container">
             <div id="logo">
                 <a href="index.html">
@@ -49,18 +51,26 @@
                                     <li><a href="#0"><i class="icon_cog"></i>Dashboard</a></li>
                                     <li><a href="#0"><i class="icon_document"></i>Bookings</a></li>
                                     <li><a href="#0"><i class="icon_heart"></i>Wish List</a></li>
-                                    <li><a href="#0"><i class="icon_key"></i>Log out</a></li>
+                                    <?php if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == 1){ ?> 
+                                    <li><a href="<?php echo base_url('Login/Logout');?>"><i class="icon_key"></i>Log out</a></li>
+                                    <?php }?>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- /dropdown -->
-                </li>    
+                </li> 
+                <?php if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1){ ?>   
             <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
+            <?php }?>
+            <?php if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == 1){ ?> 
                 <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
-                <li>
+                <?php }?>
+                <?php if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == 1){ ?> 
+                <li> 
                     <div class="dropdown dropdown-cart">
                         <a href="cart.html" class="cart_bt"><strong>2</strong></a>
+                        
                         <div class="dropdown-menu">
                             <ul>
                                 <li>
@@ -86,7 +96,8 @@
                         </div>
                     </div>
                     <!-- /dropdown-cart-->
-                </li>
+                </li><?php }?>
+                
 				
             </ul>      <!-- /top_menu -->
             <a href="#0" class="open_close">
