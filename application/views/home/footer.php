@@ -83,11 +83,18 @@
     </div>
     <form method="post"  action="<?php echo base_url('Login/validation');?>" autocomplete = "off">
         <div class="sign-in-wrapper">
+            <?php
+                if($this->session->flashdata('error'))
+                    { ?>
+                        <div   id="pass-info" class="weakpass">
+                            <?php echo $this->session->flashdata('error'); ?>
+                        </div>
+            <?php } ?> 
             <a href="#0" class="social_bt facebook">Login with Facebook</a>
             <a href="#0" class="social_bt google">Login with Google</a>
             <div class="divider"><span>Or</span></div>
             <div class="form-group">
-                <label>Email</label>
+            <label>Email</label>
                 <input type="email" class="form-control" name="email" >
                 <i class="icon_mail_alt"></i>
             </div>
@@ -124,6 +131,7 @@
 </div>
 <!-- /Sign In Modal -->
 
+
     <div id="toTop"></div><!-- Back to top button -->
     
 
@@ -138,7 +146,7 @@
 <script src="<?php echo base_url('assets/js/video_header.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/sticky_sidebar.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/specific_listing.js');?>"></script>
-
+<script src="<?php echo base_url('assets/js/pw_strenght.js');?>"></script>
 <script>
     HeaderVideo.init({
         container: $('.header-video'),

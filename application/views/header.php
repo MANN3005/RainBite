@@ -1,3 +1,4 @@
+<link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +35,11 @@
 	        </div>
 	        <div class="layer"></div><!-- Opacity Mask Menu Mobile -->
 	        <ul id="top_menu">
-	        <li>
+            <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
+            <li>
                     <div class="dropdown user clearfix">
                         <a href="#" data-toggle="dropdown">
-                            <figure><img src="<?php echo base_url('assets/img/avatar1.jpg');?>" alt=""></figure><span>Jhon Doe</span>
+                            <figure><img src="<?php echo base_url('assets/img/avatar1.jpg');?>" alt=""></figure>
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-content">
@@ -45,18 +47,27 @@
                                     <li><a href="#0"><i class="icon_cog"></i>Dashboard</a></li>
                                     <li><a href="#0"><i class="icon_document"></i>Bookings</a></li>
                                     <li><a href="#0"><i class="icon_heart"></i>Wish List</a></li>
-                                    <li><a href="#0"><i class="icon_key"></i>Log out</a></li>
+                                   
+                                    <li><a href="<?php echo base_url('Login/Logout');?>"><i class="icon_key"></i>Log out</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- /dropdown -->
-                </li>        
+                </li> 
+                <?php }?>
+                
+                <?php if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1){ ?>   
             <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
-	            <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
-				<li>
+            <?php }?>
+            <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
+                <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+                <?php }?>
+                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
+                <li> 
                     <div class="dropdown dropdown-cart">
                         <a href="cart.html" class="cart_bt"><strong>2</strong></a>
+                        
                         <div class="dropdown-menu">
                             <ul>
                                 <li>
@@ -82,8 +93,7 @@
                         </div>
                     </div>
                     <!-- /dropdown-cart-->
-                </li>
-			
+                </li><?php }?>
 			</ul>
 	        <!-- /top_menu -->
 	        <a href="#0" class="open_close">

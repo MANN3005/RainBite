@@ -4,8 +4,11 @@ class Login extends CI_Controller {
         {
             parent::__construct();
             $this->load->model('Login_model');
+            $this->load->library('session');
+            $this->load->helper(array('url'));
         }
             function validation(){
+
             $this->form_validation->set_rules('email','Email','required|trim|valid_email');
             $this->form_validation->set_rules('password','Password','required');
 
@@ -18,14 +21,12 @@ class Login extends CI_Controller {
             		$_SESSION['user_name']  = $userData->Name;
                     $_SESSION['user_lastname']  = $userData->LastName;
             		$_SESSION['user_email']  = $userData->Email;
-                    $_SESSION['logged_in']  = 1;                    
-                    redirect('Contact');
+                    $_SESSION['logged_in']  = (bool)1;   
+                    redirect($_SERVER['HTTP_REFERER']);
             	}else{
-            		$this->session->set_flashdata('error', 'Invalid Credentials.');
-                    redirect('Home');
+            		$this->session->set_flashdata('error', 'Invalid Credentials');
+                    redirect($_SERVER['HTTP_REFERER']);
             	}
-            }else{
-                $this->index();
             }
         }
         public function logout()
@@ -35,6 +36,8 @@ class Login extends CI_Controller {
             {
                 $this->session->unset_userdata($row);
             }
+            $this->session->set_flashdata('success', 'Logged Out Succesfully');                 
+
             redirect('Home');
         }
     }
