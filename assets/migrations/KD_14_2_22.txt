@@ -1,0 +1,2 @@
+CREATE TABLE `rainbite`.`blog` ( `Title` VARCHAR(40) NOT NULL , `Desciption` VARCHAR(40) NOT NULL , `Blog_Image_URL` VARCHAR(255) NOT NULL , `Message` TEXT NOT NULL , `Status` ENUM('Active','Unactive','','') NOT NULL , `AuthorName` VARCHAR(40) NOT NULL , `CreatedDate` DATE NOT NULL ) ENGINE = InnoDB;
+ALTER TABLE `blog` ADD `Id` INT(40) NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`Id`);

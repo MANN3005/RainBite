@@ -171,9 +171,15 @@
 				<!-- /col -->
 
 				<aside class="col-lg-3">
+				
 					<div class="widget">
+				
 						<div class="widget-title first">
-							<h4>Latest Post</h4>
+						<div class="form-group">
+			                  <a href="<?php echo base_url('Blog/AddBlog');?>"> <input  class="btn_1 gradient type="submit" value="Contact Us  " placeholder = "Send us a Message"></a>
+			                </div>	
+						<h3>Latest Post</h3>
+
 						</div>
 						<ul class="comments-list">
 							<li>
