@@ -3,7 +3,7 @@
 		    <div class="row">
 		        <div class="col-lg-4 col-md-6 add_bottom_25">
 		            <div id="message-contact"><?php echo validation_errors(); ?></div>
-			            <form method="post" action="<?php echo base_url('Blog/AddBlog');?>"  autocomplete="off">
+			            <form method="post" action="<?php echo base_url('Blog/AddBlog');?>"   enctype="multipart/form-data" autocomplete="off">
 			                <div class="form-group">
 			                    <input class="form-control" type="text" placeholder="Title"   name="title" maxlength=40 required value="<?php echo set_value('title'); ?>">
 			                </div>
@@ -18,8 +18,8 @@
 			                	<span><?php echo form_error('message'); ?></span>
 							</div>
                             <select name="status">
-                  <option value="Active" <?php if(isset($blogs[0]['Status']) && $blogs[0]['Status'] == 'active'){ echo "selected"; } ?> >Active</option>
-                  <option value="Inactive" <?php if(isset($blogs[0]['Status']) && $blogs[0]['Status'] == 'inactive'){ echo "selected"; } ?> >Inactive</option>
+                  <option value="Active" >Active</option>
+                  <option value="Inactive"  >Inactive</option>
                 </select>
                 <label class="control-label" for="status">Status</label><i class="mtrl-select"></i>
                 <div class="form-group">                    

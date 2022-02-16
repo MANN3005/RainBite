@@ -86,6 +86,3 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('PHOTO_SIZE', 2000000);
 define('BLOG_PAGE_SIZE', 9);
-define('GROUP_PAGE_SIZE', 9);
-define('MEMBER_PAGE_SIZE', 9);
-define('SALT', 'S0@rmy(!*');

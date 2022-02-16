@@ -22,20 +22,23 @@
 			<div class="row">
 				<div class="col-lg-9">
 					<div class="row">
+					<?php if(isset($blog) && count($blog) > 0){
+						$i = 0;
+					foreach ($blog as $value) { $i++; $img = base_url().'assets/img/blog/'. $value['Blog_Image_URL'] ?>
 						<div class="col-md-6">
 							<article class="blog">
 								<figure>
-									<a href="blog-post.html"><img src="<?php echo base_url('assets/img/blog-1.jpg');?>" alt="">
+									<a href="blog-post.html"><img src="<?php echo $img;?>" alt="">
 										<div class="preview"><span>Read more</span></div>
 									</a>
 								</figure>
 								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">Ea exerci option hendrerit</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
+									<small>Category - <?php echo substr($value['CreatedDate'],0,11); ?></small>
+									<h2><a href="blog-post.html"><?php echo isset($value['Title']) && $value['Title'] != '' ? $value['Title'] : ''; ?></a></h2>
+									<p><?php echo isset($value['Description']) && $value['Description'] != '' ? $value['Description'] : ''; ?></p>
 									<ul>
 										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
+											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> <?php echo isset($value['AuthorName']) && $value['AuthorName'] != '' ? $value['AuthorName'] : ''; ?>
 										</li>
 										<li><i class="icon_comment_alt"></i>20</li>
 									</ul>
@@ -44,129 +47,17 @@
 							<!-- /article -->
 						</div>
 						<!-- /col -->
-						<div class="col-md-6">
-							<article class="blog">
-								<figure>
-									<a href="<?php echo base_url('Blog/BlogPost');?>"><img src="<?php echo base_url('assets/img/blog-2.jpg');?>" alt="">
-										<div class="preview"><span>Read more</span></div>
-									</a>
-								</figure>
-								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">At usu sale dolorum offendit</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
-									<ul>
-										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
-										</li>
-										<li><i class="icon_comment_alt"></i>20</li>
-									</ul>
+						<?php }}
+							else{ ?>
+								<div class="col-lg-12 blog-no-data-div">
+									<p class="blog-data-message">Data not found.</p>
 								</div>
-							</article>
-							<!-- /article -->
-						</div>
-						<!-- /col -->
-						<div class="col-md-6">
-							<article class="blog">
-								<figure>
-									<a href="blog-post.html"><img src="<?php echo base_url('assets/img/blog-3.jpg');?>" alt="">
-										<div class="preview"><span>Read more</span></div>
-									</a>
-								</figure>
-								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">Iusto nominavi petentium in</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
-									<ul>
-										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
-										</li>
-										<li><i class="icon_comment_alt"></i>20</li>
-									</ul>
-								</div>
-							</article>
-							<!-- /article -->
-						</div>
-						<!-- /col -->
-						<div class="col-md-6">
-							<article class="blog">
-								<figure>
-									<a href="blog-post.html"><img src="<?php echo base_url('assets/img/blog-4.jpg');?>" alt="">
-										<div class="preview"><span>Read more</span></div>
-									</a>
-								</figure>
-								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">Assueverit concludaturque quo</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
-									<ul>
-										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
-										</li>
-										<li><i class="icon_comment_alt"></i>20</li>
-									</ul>
-								</div>
-							</article>
-							<!-- /article -->
-						</div>
-						<!-- /col -->
-						<div class="col-md-6">
-							<article class="blog">
-								<figure>
-									<a href="blog-post.html"><img src="<?php echo base_url('assets/img/blog-5.jpg');?>" alt="">
-										<div class="preview"><span>Read more</span></div>
-									</a>
-								</figure>
-								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">Nec nihil menandri appellantur</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
-									<ul>
-										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
-										</li>
-										<li><i class="icon_comment_alt"></i>20</li>
-									</ul>
-								</div>
-							</article>
-							<!-- /article -->
-						</div>
-						<!-- /col -->
-						<div class="col-md-6">
-							<article class="blog">
-								<figure>
-									<a href="blog-post.html"><img src="<?php echo base_url('assets/img/blog-6.jpg');?>" alt="">
-										<div class="preview"><span>Read more</span></div>
-									</a>
-								</figure>
-								<div class="post_info">
-									<small>Category - 20 Nov. 2017</small>
-									<h2><a href="blog-post.html">Te congue everti his salutandi</a></h2>
-									<p>Quodsi sanctus pro eu, ne audire scripserit quo. Vel an enim offendit salutandi, in eos quod omnes epicurei, ex veri qualisque scriptorem mei.</p>
-									<ul>
-										<li>
-											<div class="thumb"><img src="<?php echo base_url('assets/img/avatar.jpg');?>" alt=""></div> Admin
-										</li>
-										<li><i class="icon_comment_alt"></i>20</li>
-									</ul>
-								</div>
-							</article>
-							<!-- /article -->
-						</div>
-						<!-- /col -->
+							<?php } ?>						
+						
 					</div>
 					<!-- /row -->
 
-					<div class="pagination_fg">
-					  <a href="#">&laquo;</a>
-					  <a href="#" class="active">1</a>
-					  <a href="#">2</a>
-					  <a href="#">3</a>
-					  <a href="#">4</a>
-					  <a href="#">5</a>
-					  <a href="#">&raquo;</a>
-					</div>
-
+					
 				</div>
 				<!-- /col -->
 
