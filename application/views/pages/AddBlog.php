@@ -11,7 +11,7 @@
 			                    <input class="form-control" type="text" placeholder="Description"   name="description" maxlength=40 required value="<?php echo set_value('description'); ?>">
 			                </div>
 							<div class="form-group">
-                            <input name="blog_image" id="blog_image" type="file"/>
+                            <input name="blog_image" id="blog_image" type="file"/ required >
 			                </div>
 			                <div class="form-group">
 			                    <textarea class="form-control"  type ="text"style="height: 150px;" placeholder="Message"  name="message" maxlength=255 required value="<?php echo set_value('message'); ?>"></textarea>

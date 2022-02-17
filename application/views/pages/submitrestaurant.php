@@ -66,65 +66,11 @@
 					</div>
 				</div>
 				<!-- /row -->
+				<hr>
 			</div>
 			<!-- /container -->
 
-	<div class="bg_gray">
-		<div class="container margin_60_40">			
-			<div class="main_title center">
-				<span><em></em></span>
-				<h2>Our Pricing Plans</h2>
-				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-			</div>
-				 <div class="row plans">
-                <div class="plan col-md-4">
-                	<div class="plan-title">
-	                    <h3>1 Month</h3>
-	                    <p>Free of charge one standard listing</p>
-                	</div>
-                    <p class="plan-price">Free</p>
-                    <ul class="plan-features">
-                        <li><strong>Check and go</strong> included</li>
-                        <li><strong>1 month</strong> valid</li>
-                        <li><strong>Unsubscribe</strong> anytime</li>
-                    </ul>
-                    <a href="#submit" class="btn_1 gray btn_scroll">Submit</a>
-                </div> <!-- End col-md-4 -->
-                
-                <div class="plan plan-tall col-md-4">
-                	<div class="plan-title">
-	                    <h3>6 Months</h3>
-	                    <p>One time fee for one listing, highlighted in search results</p>
-                	</div>
-                    <p class="plan-price">$199</p>
-                    <ul class="plan-features">
-                    	<li><strong>Premium</strong> support</li>
-                        <li><strong>Check and go</strong> included</li>
-                         <li><strong>APP</strong> included</li>
-                        <li><strong>6 months</strong> valid</li>
-                        <li><strong>Unsubscribe</strong> anytime</li>
-                    </ul>
-                    <a href="#submit" class="btn_1 gradient btn_scroll">Submit</a>
-                </div><!-- End col-md-4 -->
-                
-                <div class="plan col-md-4">
-                   <div class="plan-title">
-	                    <h3>12 Months</h3>
-	                    <p>Monthly subscription for unlimited listings</p>
-                	</div>
-                    <p class="plan-price">$299</p>
-                    <ul class="plan-features">
-                    	<li><strong>Premium</strong> support</li>
-                        <li><strong>Check and go</strong> included</li>
-                        <li><strong>12 months</strong> valid</li>
-                        <li><strong>Unsubscribe</strong> anytime</li>
-                    </ul>
-                    <a href="#submit" class="btn_1 gray btn_scroll">Submit</a>
-                </div><!-- End col-md-4 -->
-            </div><!-- End row plans-->
-		</div>
-		<!-- /container -->
-	</div>
+	
 
 			<div class="container margin_60_20" id="submit">
 				<div class="row justify-content-center">
@@ -134,12 +80,12 @@
 							<p>Id persius indoctum sed, audiam verear his in, te eum quot comprehensam. Sed impetus vocibus repudiare et.</p>
 						</div>
 						<div id="message-register"></div>
-							<form method="post" action="assets/register.php" id="register">
+							<form method="post" action="<?php echo base_url('SubmitRestaurant/addrestaurant');?>">
 								<h6>Personal data</h6>
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name and Last Name" name="name_register" id="name_register">
+											<input type="text" class="form-control" placeholder="Name and Last Name" name="name" id="name_register">
 										</div>
 									</div>
 								</div>
@@ -147,16 +93,23 @@
 								<div class="row add_bottom_15">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Email Address" name="email_register" id="email_register">
+											<input type="email" class="form-control" placeholder="Email Address" name="email" >
 										</div>
 									</div>
 								</div>
 								<!-- /row -->
+								<div class="row add_bottom_15">
+									<div class="col-lg-12">
+										<div class="form-group">
+											<input type="phonenumber" class="form-control" placeholder="Phone Number" name="phone_number" >
+										</div>
+									</div>
+								</div>
 								<h6>Restaurant data</h6>
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Restaurant Name" name="restaurantname_register" id="restaurantname_register">
+											<input type="text" class="form-control" placeholder="Restaurant Name" name="restaurant_name">
 										</div>
 									</div>
 								</div>
@@ -164,40 +117,21 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Address" name="address_register" id="address_register">
+											<input type="text" class="form-control" placeholder="Address" name="address">
 										</div>
 									</div>
 								</div>
 								<!-- /row -->
 								<div class="row add_bottom_15">
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="City" name="city_register" id="city_register">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<div class="custom_select submit">
-											<select name="country_register" id="country_register" class="form-control wide">
-												<option value="">Country</option>
-												<option value="Europe">Europe</option>
-												<option value="Asia">Asia</option>
-												<option value="Unated States">Unated States</option>
-												<option value="Oceania">Oceania</option>
-											</select>
-										</div>
-										</div>
-									</div>
-								</div>
-								<!-- /row -->
-								<h6>I am not a robot</h6>
-								<div class="row add_bottom_25">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input type="text" id="verify_register" class="form-control" placeholder="Human verify: 3 + 1 =?">
+											<input type="text" class="form-control" placeholder="City" name="city" id="city_register">
 										</div>
 									</div>
+									
 								</div>
+								<!-- /row -->
+								
 								<!-- /row -->
 								<div class="form-group text-center"><input type="submit" class="btn_1 gradient" value="Submit" id="submit-register"></div>
 							</form>

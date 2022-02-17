@@ -1,0 +1,2 @@
+CREATE TABLE `rainbite`.`addrestaurant` ( `Name` VARCHAR(40) NOT NULL , `Email` VARCHAR(40) NOT NULL , `PhoneNumber` VARCHAR(10) NOT NULL , `RestaurantName` VARCHAR(40) NOT NULL , `Address` TEXT NOT NULL , `City` VARCHAR(40) NOT NULL ) ENGINE = InnoDB; 
+ALTER TABLE `addrestaurant` ADD `Id` INT(10) NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`Id`); 
