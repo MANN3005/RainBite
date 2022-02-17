@@ -23,7 +23,7 @@
     <link href="<?php echo base_url('assets/css/bootstrap_customized.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/home.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet">
+    <!-- <link href="<?php echo base_url('assets/css/order-sign_up.css');?>" rel="stylesheet"> -->
     
 </head>
 

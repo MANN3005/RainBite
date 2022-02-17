@@ -56,19 +56,20 @@
 						
 					</div>
 					<!-- /row -->
-
-					
 				</div>
 				<!-- /col -->
-
 				<aside class="col-lg-3">
 				
 					<div class="widget">
 				
 						<div class="widget-title first">
+						<?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ 
+							if(isset($_SESSION['role']) && $_SESSION['role']=='Admin'){
+							?>
 						<div class="form-group">
-			                  <a href="<?php echo base_url('Blog/AddBlog');?>"> <input  class="btn_1 gradient type="submit" value="Contact Us  " placeholder = "Send us a Message"></a>
+			                  <a href="<?php echo base_url('Blog/AddBlog');?>"> <input  class="btn_1 gradient" type= "submit" value="Add Blog"></a>
 			                </div>	
+							<?php }}?>
 						<h3>Latest Post</h3>
 
 						</div>

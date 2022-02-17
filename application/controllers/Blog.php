@@ -68,11 +68,14 @@ class Blog extends CI_Controller {
                 }  
                 if($this->Blog_model->addblog($addUpdateData)){
                     $this->session->set_flashdata('success', 'Successfully Added!.');
+                    redirect('Blog');
                 } else {
                        $this->session->set_flashdata('error', "Data can't be added!.");
+                        redirect('Blog/AddBlog');
                     }
+
                 }               
-                // redirect('Blog');
+                
               
             $this->load->view('header');
             $this->load->view('pages/AddBlog');

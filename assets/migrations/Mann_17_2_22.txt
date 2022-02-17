@@ -1,0 +1,5 @@
+ALTER TABLE `usersignup` ADD `PhoneNumber` VARCHAR(20) NOT NULL AFTER `Email`;
+
+ALTER TABLE `usersignup` ADD `Role` ENUM('Admin','RestaurantAdmin','User') NOT NULL AFTER `Password`;
+
+RENAME TABLE `rainbite`.`usersignup` TO `rainbite`.`user`;

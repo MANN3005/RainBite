@@ -15,7 +15,7 @@
 
         public function resolve_user_login($username, $password) {
             $this->db->select('Password');
-            $this->db->from('usersignup');
+            $this->db->from('user');
             $this->db->where('Email', $username);
             
             $hash = $this->db->get()->row('Password');
@@ -24,8 +24,8 @@
         }
 
         public function get_user($userName) {        
-            $this->db->select('id,Name,LastName,Email');
-            $this->db->from('usersignup');
+            $this->db->select('Id,Name,LastName,Email,PhoneNumber,Role');
+            $this->db->from('user');
             $this->db->where('Email', $userName);
             return $this->db->get()->row();            
         }

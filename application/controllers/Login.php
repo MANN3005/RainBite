@@ -21,6 +21,8 @@ class Login extends CI_Controller {
             		$_SESSION['user_name']  = $userData->Name;
                     $_SESSION['user_lastname']  = $userData->LastName;
             		$_SESSION['user_email']  = $userData->Email;
+                    $_SESSION['phone_number'] = $userData->PhoneNumber;
+                    $_SESSION['role'] = $userData->Role;
                     $_SESSION['logged_in']  = (bool)1;   
                     redirect($_SERVER['HTTP_REFERER']);
             	}else{

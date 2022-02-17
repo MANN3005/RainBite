@@ -27,6 +27,10 @@
 					<i class="icon_mail_alt"></i>
 				</div>
 				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Phone Number" name="phone_number" maxlength=40 required value="<?php echo set_value('phone_number');?>">
+					<i class="icon_mail_alt"></i>
+				</div>
+				<div class="form-group">
 					<input class="form-control" type="password" id="password1" placeholder="Password" name="password" maxlength=40 required value="<?php echo set_value('password');?>">
 					<i class="icon_lock_alt"></i>
 				</div>
