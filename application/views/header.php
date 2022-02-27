@@ -63,6 +63,9 @@
             <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
                 <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
                 <?php }?>
+                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1 && $_SESSION['role']=="Admin"){ ?> 
+                   <li><a href="wishlist.html"    class="icon_datareport_alt" title="Your wishlist">Admin Section</a></li>
+                    <?php }?>
                 <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
                 <li> 
                     <div class="dropdown dropdown-cart">

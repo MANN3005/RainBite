@@ -155,7 +155,16 @@
         autoPlayVideo: true
     });
 </script>
-
+<script src="<?php echo base_url('assets/js/typed.min.js');?>"></script>
+    <script>
+        var typed = new Typed('.element', {
+          strings: ["at the best price", "with unique food", "with nice location"],
+          startDelay: 10,
+          loop: true,
+          backDelay: 2000,
+          typeSpeed: 50
+        });
+    </script>
 <!-- Autocomplete -->
 <script>
 function initMap() {

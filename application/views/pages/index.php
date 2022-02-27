@@ -7,7 +7,7 @@
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-7 col-lg-8 col-md-8">
                                 <h1>Delivery or Takeaway Food</h1>
-                            <p>The best restaurants at the best price</p>
+                            <p>All restaurants <span class="element" style="font-weight: 500"></span></p>
                                 <form method="post" action="grid-listing-filterscol.html">
                                 <div class="row no-gutters custom-search-input">
                                     <div class="col-lg-10">
