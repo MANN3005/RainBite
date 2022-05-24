@@ -11,5 +11,9 @@ class Admin extends CI_Controller {
         $this->load->view('admin/index');
         // $this->load->view('home/footer');
 	}
-    
+    public function listing(){
+        $this->load->view('admin/header');
+        $this->load->view('admin/listing');
+        // $this->load->view('home/footer');
+	}
 }
