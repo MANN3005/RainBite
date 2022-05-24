@@ -65,7 +65,7 @@
                     </ul>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing + Menu List">
-                    <a class="nav-link" href="add-listing-with-menu-list.html">
+                    <a class="nav-link" href="<?php echo base_url('Admin/listing');?>">
                         <i class="fa fa-fw fa-plus-circle"></i>
                         <span class="nav-link-text">Add listing + Menu List</span>
                     </a>

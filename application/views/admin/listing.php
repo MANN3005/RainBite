@@ -11,7 +11,7 @@
                 </li>
                 <li class="breadcrumb-item active">Add listing</li>
             </ol>
-            <form method="post"  action="<?php echo base_url('Admin/listing');?>" autocomplete = "off">
+            <form method="post"  action="<?php echo base_url('Admin/Registration');?>" autocomplete = "off">
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
                     <h2><i class="fa fa-file"></i>Basic info</h2>
@@ -596,6 +596,7 @@
             <!-- /.container-wrapper-->
             
 				<p><input class="btn_1 medium" type="submit"  value="Submit"></p>
+</form>
             <!-- <p><a href="#0" class="btn_1 medium">Save</a> <a href="#0" class="btn_1 medium gray">Add another item</a></p> -->
             <footer class="sticky-footer">
                 <div class="container">
