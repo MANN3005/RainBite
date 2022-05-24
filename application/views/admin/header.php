@@ -10,24 +10,24 @@
     <title>FOOYES - Admin dashboard</title>
     <!-- Favicons-->
     <link rel="shortcut icon" href="admin/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="assets/admin/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/admin/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/admin/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/admin/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" href="<?php echo base_url('assets/admin/img/apple-touch-icon-57x57-precomposed.png');?>">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="<?php echo base_url('assets/admin/img/apple-touch-icon-72x72-precomposed.png');?>">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="<?php echo base_url('assets/admin/img/apple-touch-icon-114x114-precomposed.png');?>">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="<?php echo base_url('assets/admin/img/apple-touch-icon-144x144-precomposed.png');?>">
     <!-- Bootstrap core CSS-->
-    <link href="assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/vendor/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
     <!-- Main styles -->
-    <link href="assets/admin/css/admin.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/css/admin.css');?>" rel="stylesheet">
     <!-- Icon fonts-->
-    <link href="assets/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('assets/admin/vendor/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css">
     <!-- Plugin styles -->
-    <link href="assets/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="assets/admin/vendor/dropzone.css" rel="stylesheet">
-    <link href="assets/admin/css/date_picker.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/vendor/datatables/dataTables.bootstrap4.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/vendor/dropzone.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/css/date_picker.css');?>" rel="stylesheet">
     <!-- Your custom styles -->
-    <link href="assets/admin/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/admin/css/custom.css');?>" rel="stylesheet">
     <!-- WYSIWYG Editor -->
-    <link rel="stylesheet" href="assets/admin/js/editor/summernote-bs4.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/admin/js/editor/summernote-bs4.css');?>">
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
@@ -229,3 +229,44 @@
         </div>
     </nav>
     <!-- /Navigation-->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url('assets/admin/vendor/jquery/jquery.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="<?php echo base_url('assets/admin/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="<?php echo base_url('assets/admin/vendor/chart.js/Chart.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/datatables/jquery.dataTables.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/datatables/dataTables.bootstrap4.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/jquery.magnific-popup.min.js');?>"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="<?php echo base_url('assets/admin/js/admin.js');?>"></script>
+    <!-- Custom scripts for this page-->
+    <script src="<?php echo base_url('assets/admin/js/admin-charts.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/dropzone.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/js/admin-datatables.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/js/admin.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/js/admin-datatables.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/js/admin-charts-all.js');?>"></script>
+    <script src="<?php echo base_url('assets/admin/vendor/bootstrap-datepicker.js');?>"></script>
+            <script>
+            $('input.date-pick').datepicker();
+            </script>
+            <!-- WYSIWYG Editor -->
+            <script src="<?php echo base_url('assets/admin/js/editor/summernote-bs4.min.js');?>"></script>
+            <script>
+            $('.editor').summernote({
+                fontSizes: ['10', '14'],
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough']],
+                    ['fontsize', ['fontsize']],
+                    ['para', ['ul', 'ol', 'paragraph']]
+                ],
+                placeholder: 'Write here ....',
+                tabsize: 2,
+                height: 200
+            });
+            </script>
