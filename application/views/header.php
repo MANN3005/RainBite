@@ -47,7 +47,9 @@
                                     <li><a href="#0"><i class="icon_cog"></i>Dashboard</a></li>
                                     <li><a href="#0"><i class="icon_document"></i>Bookings</a></li>
                                     <li><a href="#0"><i class="icon_heart"></i>Wish List</a></li>
-                                   
+                                    <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
+                                        <li><a href="#0"><i class="icon_toolbox_alt"></i>Admin</a></li>
+                                    <?php } ?> 
                                     <li><a href="<?php echo base_url('Login/Logout');?>"><i class="icon_key"></i>Log out</a></li>
                                 </ul>
                             </div>
