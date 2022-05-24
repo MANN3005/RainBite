@@ -11,6 +11,7 @@
                 </li>
                 <li class="breadcrumb-item active">Add listing</li>
             </ol>
+            <form method="post"  action="<?php echo base_url('Admin/listing');?>" autocomplete = "off">
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
                     <h2><i class="fa fa-file"></i>Basic info</h2>
@@ -19,16 +20,16 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Listing Title</label>
-                            <input type="text" class="form-control" placeholder="Da Alfredo">
+                            <input type="text"  name ="r_name"  required value="<?php echo set_value('r_name');?>"class="form-control" placeholder="Da Alfredo">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Category</label>
-                            <div class="styled-select">
-                            <input type="text" class="form-control" placeholder="Category">
+                            <!-- <div class="styled-select"> -->
+                            <input type="text" name="category" required value="<?php echo set_value('category');?>"class="form-control" placeholder="Category">
                                 
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -38,15 +39,15 @@
                     <div class="col-md-6">
                         <div class="form-group radio_c_group no_label">
                             <label class="container_radio">Delivery
-                                <input type="radio" value="checkbox" name="service" checked="checked">
+                                <input type="radio" value="checkbox" name="s_type" required value="<?php echo set_value('s_type');?>" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container_radio">Takeaway
-                                <input type="radio" value="checkbox" name="service">
+                                <input type="radio" value="checkbox" name="s_type">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container_radio">Both
-                                <input type="radio" value="checkbox" name="service">
+                                <input type="radio" value="checkbox" name="s_type">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -66,14 +67,14 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Phone (Optional)</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="phone_no" required value="<?php echo set_value('phone_no');?>" class="form-control">
                         </div>
                     </div>
                     
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Email (Optional)</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="email" required value="<?php echo set_value('email');?>" >
                         </div>
                     </div>
                 </div>
@@ -99,15 +100,15 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Select City</label>
-                            <div class="styled-select">
-                            <input type="text" class="form-control" placeholder="City">
-                            </div>
+                            <!-- <div class="styled-select"> -->
+                            <input type="text" name="city" required value="<?php echo set_value('city');?>"class="form-control" placeholder="City">
+                            <!-- </div> -->
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Address</label>
-                            <input type="text" class="form-control" placeholder="ex. 250, Fifth Avenue...">
+                            <input type="text"  name="address" required value="<?php echo set_value('address');?>"class="form-control" placeholder="ex. 250, Fifth Avenue...">
                         </div>
                     </div>
                 </div>
@@ -117,7 +118,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>PinCode</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="pincode" required value="<?php echo set_value('pincode');?>" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -425,7 +426,7 @@
                 </div> -->
                 <!-- /row-->
             <!-- </div>  -->
-            <!-- /box_general-->
+            <!-- /box_general
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
                     <h2><i class="fa fa-list"></i>Add item to Menu List</h2>
@@ -490,11 +491,11 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- /row-->
-                                    </div>
+                                    <!-- </div> -->
                                     <!-- /item_opt_wrapper-->
-                                    <div class="item_opt_wrapper" style="background-color: #fff;">
+                                    <!-- <div class="item_opt_wrapper" style="background-color: #fff;">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-4">
                                                 <div class="form-group">
@@ -518,12 +519,13 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- /row-->
-                                    </div>
+                                    <!-- </div> -->
                                     <!-- /item_opt_wrapper-->
-                                </div><!-- End form-group -->
-                                <div class="form-group">
+                                <!-- </div> -->
+                                <!-- End form-group -->
+                                <!-- <div class="form-group">
                                     <label>Item ingredients</label>
                                     <div class="item_opt_wrapper">
                                         <div class="row">
@@ -549,11 +551,11 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- /row-->
-                                    </div>
+                                    <!-- </div> -->
                                     <!-- /item_opt_wrapper-->
-                                    <div class="item_opt_wrapper" style="background-color: #fff;">
+                                    <!-- <div class="item_opt_wrapper" style="background-color: #fff;">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-4">
                                                 <div class="form-group">
@@ -577,19 +579,24 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- /row-->
-                                    </div><!-- End form-group -->
-                                </div>
-                            </div><!-- End row -->
-                        </div><!-- End strip_menu_items -->
-                    </div>
+                                    <!-- </div> -->
+                                    <!-- End form-group -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- End row -->
+                        <!-- </div> -->
+                        <!-- End strip_menu_items -->
+                    <!-- </div> -->
                     <!-- /box_general-->
-                </div>
+                <!-- </div> -->
                 <!-- /.container-fluid-->
-            </div>
+            <!-- </div> -->
             <!-- /.container-wrapper-->
-            <p><a href="#0" class="btn_1 medium">Save</a> <a href="#0" class="btn_1 medium gray">Add another item</a></p>
+            
+				<p><input class="btn_1 medium" type="submit"  value="Submit"></p>
+            <!-- <p><a href="#0" class="btn_1 medium">Save</a> <a href="#0" class="btn_1 medium gray">Add another item</a></p> -->
             <footer class="sticky-footer">
                 <div class="container">
                     <div class="text-center">
