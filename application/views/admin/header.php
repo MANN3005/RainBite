@@ -9,25 +9,25 @@
     <meta name="author" content="Ansonika">
     <title>FOOYES - Admin dashboard</title>
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="shortcut icon" href="admin/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="assets/admin/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/admin/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/admin/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/admin/img/apple-touch-icon-144x144-precomposed.png">
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Main styles -->
-    <link href="css/admin.css" rel="stylesheet">
+    <link href="assets/admin/css/admin.css" rel="stylesheet">
     <!-- Icon fonts-->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Plugin styles -->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="vendor/dropzone.css" rel="stylesheet">
-    <link href="css/date_picker.css" rel="stylesheet">
+    <link href="assets/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="assets/admin/vendor/dropzone.css" rel="stylesheet">
+    <link href="assets/admin/css/date_picker.css" rel="stylesheet">
     <!-- Your custom styles -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="assets/admin/css/custom.css" rel="stylesheet">
     <!-- WYSIWYG Editor -->
-    <link rel="stylesheet" href="js/editor/summernote-bs4.css">
+    <link rel="stylesheet" href="assets/admin/js/editor/summernote-bs4.css">
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
