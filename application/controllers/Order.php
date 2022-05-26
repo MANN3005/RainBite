@@ -35,5 +35,15 @@ class Order extends CI_Controller {
 
 
     }
+    public function Category(){      
+        $Category = $this->input->post('Category');
+        $data = array();
+        $data['order'] = $this->Order_model->getbyCategory($Category);
+        $this->load->view('header');
+        $this->load->view('pages/orderhome',$data,$Category);
+        $this->load->view('footer');
+
+
+    }
 }
 ?>
