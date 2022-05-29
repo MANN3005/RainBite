@@ -14,9 +14,18 @@ class Order extends CI_Controller {
         $this->load->view('pages/orderhome', $data);
         $this->load->view('footer');
     }
-    public function orderdetail(){      
+    public function orderdetail($Id=' '){  
+        $RestaurantId = $this->input->post('Id');
+        $data=array();
+       
+        $data['Id'] = $Id !='' ? $Id : '';
+        if($Id !=" "){
+        $data['Order'] = $this->Order_model->getRestaurantDetail($Id);
+
+
+        }    
         $this->load->view('header');
-        $this->load->view('pages/orderdetail');
+        $this->load->view('pages/orderdetail',$data);
         $this->load->view('footer');
 
 

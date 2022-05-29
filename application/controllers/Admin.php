@@ -50,4 +50,14 @@ class Admin extends CI_Controller {
             $this->index();
         } 
     }
+    public function Menu(){      
+        // $Category = $this->input->post('Category');
+        // $data = array();
+        // $data['order'] = $this->Order_model->getbyCategory($Category);
+        $this->load->view('Admin/header');
+        $this->load->view('Admin/Menu',);
+        // $this->load->view('footer');
+
+
+    }
 }

@@ -29,4 +29,10 @@
             $this->db->where('Email', $userName);
             return $this->db->get()->row();            
         }
+         public function Restaurant_Id($userName) {        
+            $this->db->select('Id,Email');
+            $this->db->from('listing');
+            $this->db->where('Email', $userName);
+            return $this->db->get()->row();            
+        }
     }

@@ -28,6 +28,7 @@
     <link href="<?php echo base_url('assets/admin/css/custom.css');?>" rel="stylesheet">
     <!-- WYSIWYG Editor -->
     <link rel="stylesheet" href="<?php echo base_url('assets/admin/js/editor/summernote-bs4.css');?>">
+
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
@@ -72,6 +73,12 @@
                     <a class="nav-link" href="<?php echo base_url('Admin/listing');?>">
                         <i class="fa fa-fw fa-plus-circle"></i>
                         <span class="nav-link-text">Add listing + Menu List</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing + Menu List">
+                    <a class="nav-link" href="<?php echo base_url('Admin/Menu');?>">
+                        <i class="fa fa-fw fa-plus-circle"></i>
+                        <span class="nav-link-text">Menu </span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Orders Page">

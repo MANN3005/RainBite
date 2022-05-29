@@ -1,0 +1,1 @@
+CREATE TABLE `rainbite`.`menu` ( `Id` INT(10) NOT NULL AUTO_INCREMENT , `Retaurant_Id` INT(10) NOT NULL , `Menu_category` VARCHAR(255) NOT NULL , `Item_Name` VARCHAR(255) NOT NULL , `Price` INT(10) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB; 

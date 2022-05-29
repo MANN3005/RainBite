@@ -1,4 +1,4 @@
-<?php echo $Category?>
+
 <link href="<?php echo base_url('assets/css/listing.css');?>" rel="stylesheet">
 <main>
 	<div class="page_header element_to_stick">
@@ -262,7 +262,7 @@
 							    <figure>
 							    	<span class="ribbon off">15% off</span>
 							        <img src="img/lazy-placeholder.png" data-src="img/location_1.jpg" class="img-fluid lazy" alt="">
-							        <a href="<?php echo base_url('Order/orderdetail');?>" class="strip_info">
+							        <a href="<?php echo base_url().'Order/orderdetail/'.$value['Id'];?>" class="strip_info">
 							            <small>Pizza</small>
 							            <div class="item_title">
 							                <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
@@ -304,3 +304,4 @@
 		
 	</main>
 	<!-- /main -->
+	<h4><a href="<?php echo base_url().'groupDetails/'.$value['Id'];?>" title=""><?php echo isset($value['Group_Name']) && $value['Group_Name'] !='' ? $value['Group_Name'] : '';?></a></h4>
