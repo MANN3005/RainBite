@@ -17,7 +17,7 @@ class Login extends CI_Controller {
             if($this->form_validation->run()){
             	if($this->Login_model->resolve_user_login($email, $password)){
             		$userData = $this->Login_model->get_user($email);
-                    // $Restaurant_Id = $this->Login_model->get_Restaurant_Id($email);
+                    $Restaurant_Id = $this->Login_model->get_Restaurant_Id($email);
             		$_SESSION['user_id']  = (int)$userData->Id;
             		$_SESSION['user_name']  = $userData->Name;
                     $_SESSION['user_lastname']  = $userData->LastName;

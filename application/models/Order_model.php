@@ -26,5 +26,10 @@
             $query = $this->db->get();
             return $result = $query->result_array();
         }
+        
+        public function Menu($insert){
+            $this->db->insert('Menu', $insert);
+            return $this->db->insert_id();
+        }
 
 }
