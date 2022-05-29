@@ -26,7 +26,7 @@ class Login extends CI_Controller {
                     $_SESSION['role'] = $userData->Role;
                     $_SESSION['logged_in']  = (bool)1;   
                     if($_SESSION['role']=='RestaurantAdmin'){
-                        $_SESSION['Resto_Id'] = (int)$Restaurant_Id->Id;
+                        $_SESSION['resto_Id'] = (int)$Restaurant_Id->Id;
                     }
                     redirect($_SERVER['HTTP_REFERER']);
             	}else{

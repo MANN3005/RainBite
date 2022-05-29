@@ -56,28 +56,19 @@ class Admin extends CI_Controller {
         $this->form_validation->set_rules('menu_category','Menu_category','required|trim|max_length[255]');
         $this->form_validation->set_rules('item_name','Item_Name','required|trim|max_length[255]');
         $this->form_validation->set_rules('price','Price','required|trim|max_length[10]');
-       
         if($this->form_validation->run()){
             $insert = array(
-                'Restaurant_Id'  =>  $_SESSION['Resto_Id'],
+                'Restaurant_Id'  =>  ($_SESSION['resto_Id']),
                 'Menu_category'  => strip_tags($this->input->post('menu_category')),
                 'Item_Name' => strip_tags($this->input->post('item_name')),
                 'Price' => strip_tags($this->input->post('price')),
-                
-
-               
             );
             $result = $this->Order_model->Menu($insert); 
-            
-              
             redirect('Admin/Menu'); 
         }
         else{
             $this->index();
         }    
-        // $Category = $this->input->post('Category');
-        // $data = array();
-        // $data['order'] = $this->Order_model->getbyCategory($Category);
         $this->load->view('Admin/header');
         $this->load->view('Admin/Menu',);
         // $this->load->view('footer');

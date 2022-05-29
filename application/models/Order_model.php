@@ -31,5 +31,4 @@
             $this->db->insert('Menu', $insert);
             return $this->db->insert_id();
         }
-
 }
