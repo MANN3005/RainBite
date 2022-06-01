@@ -21,8 +21,16 @@
         public function getRestaurantDetail($Id)
         {
             $this->db->select('Id, R_Name, Category, S_Type, Phone_No, Email, City, Address, Pincode');
-            $this->db->from('listing');           
+            $this->db->from('listing');    
             $this->db->where('Id',$Id);
+            $query = $this->db->get();
+            return $result = $query->result_array();
+        }
+        public function getRestaurantMenu($Id)
+        {
+            $this->db->select('Id, Restaurant_Id, Menu_category, Item_Name,Price');
+            $this->db->from('menu');    
+            $this->db->where('Restaurant_Id',$Id);
             $query = $this->db->get();
             return $result = $query->result_array();
         }

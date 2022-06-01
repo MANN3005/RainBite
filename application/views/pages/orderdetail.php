@@ -62,6 +62,7 @@
 	                    <section id="section-1">
 	                        <h4>Starters</h4>
 	                        <div class="table_wrapper">
+							
 	                            <table class="table cart-list menu-gallery">
 	                                <thead>
 	                                    <tr>
@@ -77,20 +78,25 @@
 	                                    </tr>
 	                                </thead>
 	                                <tbody>
-	                                    <tr>
+									
+									<?php if(isset($Menu) && count($Menu) > 0){ 
+											$i = 0; 
+											foreach ($Menu as $value) { $i++; 
+											if($value['Menu_category'] =='Starters'){?>
+											<tr>
 	                                        <td class="d-md-flex align-items-center">
 	                                            <figure>
 	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_1.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-1.jpg');?>" alt="thumb" class="lazy"></a>
 	                                            </figure>
 	                                            <div class="flex-md-column">
-	                                                <h4>1. Mexican Enchiladas</h4>
+	                                                <h4><?php echo isset($value['Item_Name']) && $value['Item_Name'] != '' ? $value['Item_Name'] : ''; ?></h4>
 	                                                <p>
 	                                                    Fuisset mentitum deleniti sit ea.
 	                                                </p>
 	                                            </div>
 	                                        </td>
 	                                        <td>
-	                                            <strong>$9.40</strong>
+	                                            <strong><?php echo isset($value['Price']) && $value['Price'] != '' ? $value['Price'] : ''; ?></strong>
 	                                        </td>
 	                                        <td class="options">
 	                                            <div class="dropdown dropdown-options">
@@ -137,186 +143,13 @@
 	                                            </div>
 	                                        </td>
 	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_2.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-2.jpg');?>" alt="thumb" class="lazy"></a>
-	                                            	</figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>2. Fajitas</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$6.80</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <div class="dropdown dropdown-options">
-	                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
-	                                                <div class="dropdown-menu">
-	                                                    <h5>Select an option</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_radio">Medium<small>+ $3.30</small>
-	                                                                <input type="radio" value="option1" name="options_2">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Large<small>+ $5.30</small>
-	                                                                <input type="radio" value="option2" name="options_2">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Extra Large<small>+ $8.30</small>
-	                                                                <input type="radio" value="option3" name="options_2">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <h5>Add ingredients</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_check">Extra Tomato<small>+ $4.30</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_check">Extra Peppers<small>+ $2.50</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <a href="#0" class="btn_1">Add to cart</a>
-	                                                </div>
-	                                            </div>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="<?php echo base_url('assets/img/menu_item_large_3.jpg');?>" title="Photo title" data-effect="mfp-zoom-in"><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-3.jpg');?>" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>3. Royal Fajitas</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$5.70</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <div class="dropdown dropdown-options">
-	                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
-	                                                <div class="dropdown-menu">
-	                                                    <h5>Select an option</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_radio">Medium<small>+ $3.30</small>
-	                                                                <input type="radio" value="option1" name="options_3">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Large<small>+ $5.30</small>
-	                                                                <input type="radio" value="option2" name="options_3">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Extra Large<small>+ $8.30</small>
-	                                                                <input type="radio" value="option3" name="options_3">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <h5>Add ingredients</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_check">Extra Tomato<small>+ $4.30</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_check">Extra Peppers<small>+ $2.50</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <a href="#0" class="btn_1">Add to cart</a>
-	                                                </div>
-	                                            </div>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-4.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>4. Chicken Enchilada Wrap</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$5.20</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <div class="dropdown dropdown-options">
-	                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
-	                                                <div class="dropdown-menu">
-	                                                    <h5>Select an option</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_radio">Medium<small>+ $3.30</small>
-	                                                                <input type="radio" value="option1" name="options_4">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Large<small>+ $5.30</small>
-	                                                                <input type="radio" value="option2" name="options_4">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_radio">Extra Large<small>+ $8.30</small>
-	                                                                <input type="radio" value="option3" name="options_4">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <h5>Add ingredients</h5>
-	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_check">Extra Tomato<small>+ $4.30</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                        <li>
-	                                                            <label class="container_check">Extra Peppers<small>+ $2.50</small>
-	                                                                <input type="checkbox">
-	                                                                <span class="checkmark"></span>
-	                                                            </label>
-	                                                        </li>
-	                                                    </ul>
-	                                                    <a href="#0" class="btn_1">Add to cart</a>
-	                                                </div>
-	                                            </div>
-	                                        </td>
-	                                    </tr>
+										<?php }}}
+							else{ ?>
+								<div class="col-lg-12 blog-no-data-div">
+									<p class="blog-data-message">Data not found.</p>
+								</div>
+							<?php } ?>		
+	                
 	                                </tbody>
 	                            </table>
 	                        </div>
@@ -341,13 +174,17 @@
 	                                    </tr>
 	                                </thead>
 	                                <tbody>
+									<?php if(isset($Menu) && count($Menu) > 0){ 
+											$i = 0; 
+											foreach ($Menu as $value) { $i++; 
+											if($value['Menu_category'] =='Main Course'){?>
 	                                    <tr>
 	                                        <td class="d-md-flex align-items-center">
 	                                            <figure>
 	                                            	<a href="img/menu_item_large_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-5.jpg" alt="thumb" class="lazy"></a>
 	                                            </figure>
 	                                            <div class="flex-md-column">
-	                                                <h4>5. Cheese Quesadilla</h4>
+	                                                <h4><?php echo isset($value['Item_Name']) && $value['Item_Name'] != '' ? $value['Item_Name'] : ''; ?></h4>
 	                                                <p>
 	                                                    Fuisset mentitum deleniti sit ea.
 	                                                </p>
@@ -360,108 +197,17 @@
 	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
 	                                        </td>
 	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-6.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>6. Chorizo & Cheese</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$24.71</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-7.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>7. Beef Taco</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$8.70</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-8.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>8. Minced Beef Double Layer</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$6.30</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-9.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>9. Piri Piri Chicken</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$7.40</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
-	                                        </td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="d-md-flex align-items-center">
-	                                            <figure>
-	                                            	<a href="img/menu_item_large_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/menu-thumb-placeholder.jpg" data-src="img/menu-thumb-10.jpg" alt="thumb" class="lazy"></a>
-	                                            </figure>
-	                                            <div class="flex-md-column">
-	                                                <h4>10. Burrito Al Pastor</h4>
-	                                                <p>
-	                                                    Fuisset mentitum deleniti sit ea.
-	                                                </p>
-	                                            </div>
-	                                        </td>
-	                                        <td>
-	                                            <strong>$7.70</strong>
-	                                        </td>
-	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
-	                                        </td>
-	                                    </tr>
+										<?php }}}else{ ?>
+								<div class="col-lg-12 blog-no-data-div">
+									<p class="blog-data-message">Data not found.</p>
+								</div>
+							<?php } ?>	
 	                                </tbody>
 	                            </table>
 	                        </div>
 	                    </section>
 	                    <!-- /section -->
-
-	                    <section id="section-3">
+					    <section id="section-3">
 	                        <h4>Desserts</h4>
 	                        <div class="table_wrapper">
 	                            <table class="table table-striped cart-list menu-gallery">
