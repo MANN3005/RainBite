@@ -304,4 +304,3 @@
 		
 	</main>
 	<!-- /main -->
-	<h4><a href="<?php echo base_url().'groupDetails/'.$value['Id'];?>" title=""><?php echo isset($value['Group_Name']) && $value['Group_Name'] !='' ? $value['Group_Name'] : '';?></a></h4>
