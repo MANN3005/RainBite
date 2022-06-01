@@ -1,3 +1,7 @@
 CREATE TABLE `rainbite`.`reviews` ( `Id` INT(10) NOT NULL AUTO_INCREMENT , `Food_Quality` INT(10) NOT NULL , `Service` INT(10) NOT NULL , `Punctuality` INT(10) NOT NULL , `Price` INT(10) NOT NULL , `R_Title` VARCHAR(255) NOT NULL , `R_Desc` VARCHAR(255) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB;
 
 ALTER TABLE `reviews` ADD `Restaurant_Id` INT(10) NOT NULL AFTER `Id`;
+
+ALTER TABLE `reviews` CHANGE `R_Title` `Rev_Title` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+
+ALTER TABLE `reviews` CHANGE `R_Desc` `Rev_Desc` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
