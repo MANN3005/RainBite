@@ -1,6 +1,6 @@
 <link href="<?php echo base_url('assets/css/review.css');?>" rel="stylesheet">
 <main class="bg_gray">
-<form method="post"  action="<?php echo base_url('Review/index');?>" autocomplete = "off">
+<form method="post"  action="<?php echo base_url('Review/validation');?>" autocomplete = "off">
 		<div class="container margin_60_20">
 		    <div class="row justify-content-center">
 		
@@ -19,7 +19,7 @@
 		                    </div>
 		                    <div class="col-md-3 add_bottom_25">
 		                        <div class="add_bottom_15">Punctuality <strong class="location_val"></strong></div>
-		                        <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal"  name="location">
+		                        <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal"  name="punctuality">
 		                    </div>
 		                    <div class="col-md-3 add_bottom_25">
 		                        <div class="add_bottom_15">Price <strong class="price_val"></strong></div>
