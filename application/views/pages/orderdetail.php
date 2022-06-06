@@ -661,7 +661,7 @@
 	                        <!-- /review_card -->
 	                    </div>
 	                    <!-- /reviews -->
-	                    <div class="text-right"><a href="<?php echo base_url().'Review/index/'.$Order[0]['Id'];?>" class="btn_1 gradient">Leave a Review</a></div>
+	                    <div class="text-right"><a href="<?php echo base_url().'Review/review/'.$Order[0]['Id'];?>" class="btn_1 gradient">Leave a Review</a></div>
 	                </section>
 	                <!-- /section -->
 	            </div>

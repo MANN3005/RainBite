@@ -7,8 +7,8 @@ class Review extends CI_Controller {
         $this->load->model('Review_model');
     }
 
-    public function index(){
-        echo $this->uri->segment('4');
+    public function index($id=''){
+        echo $this->uri->segment('3');
         // $data=array();
         // //$data['Id'] = $Id !='' ? $Id : '';
         $this->form_validation->set_rules('food_quality','Food_Quality','required|max_length[10]');
@@ -26,7 +26,7 @@ class Review extends CI_Controller {
                 'Price' => strip_tags($this->input->post('price')),
                 'Rev_Title'  => strip_tags($this->input->post('rev_title')),
                 'Rev_Desc'  => strip_tags($this->input->post('rev_desc')),
-                'User_Name' => $_SESSION['user_name']
+                'User_Name' => $_SESSION['user_name'],
              
 
                
@@ -47,4 +47,37 @@ class Review extends CI_Controller {
         $this->load->view('pages/review');
         $this->load->view('footer');
 	}
+    public function review(){
+        $RestaurantId =  $this->uri->segment('3');
+        // $data=array();
+        // //$data['Id'] = $Id !='' ? $Id : '';
+        $this->form_validation->set_rules('food_quality','Food_Quality','required|max_length[10]');
+        $this->form_validation->set_rules('service','Service','required|max_length[10]');
+        $this->form_validation->set_rules('punctuality','Punctuality','required|max_length[10]');
+        $this->form_validation->set_rules('price','Price','required|max_length[10]');
+        $this->form_validation->set_rules('rev_title','Rev_Title','required|max_length[255]');
+        $this->form_validation->set_rules('rev_desc','Rev_Desc','required|max_length[255]');
+        if($this->form_validation->run()){
+            $insert = array(
+                'Food_Quality'  => strip_tags($this->input->post('food_quality')),
+                'Restaurant_Id'  => $RestaurantId,
+                'Service' => strip_tags($this->input->post('service')),
+                'Punctuality' => strip_tags($this->input->post('punctuality')),
+                'Price' => strip_tags($this->input->post('price')),
+                'Rev_Title'  => strip_tags($this->input->post('rev_title')),
+                'Rev_Desc'  => strip_tags($this->input->post('rev_desc')),
+                'User_Name' => $_SESSION['user_name'],
+             
+
+               
+            );
+            $result = $this->Review_model->addreview($insert); 
+            
+              
+            redirect('review'); 
+        }
+        else{
+            $this->index();
+        }
+    }
 }
