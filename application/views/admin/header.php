@@ -243,7 +243,7 @@
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url('assets/admin/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="<?php echo base_url('assets/admin/vendor/chart.js/Chart.js');?>"></script>
+    <!-- <script src="<?php echo base_url('assets/admin/vendor/chart.js/Chart.js');?>"></script> -->
     <script src="<?php echo base_url('assets/admin/vendor/datatables/jquery.dataTables.js');?>"></script>
     <script src="<?php echo base_url('assets/admin/vendor/datatables/dataTables.bootstrap4.js');?>"></script>
     <script src="<?php echo base_url('assets/admin/vendor/jquery.magnific-popup.min.js');?>"></script>

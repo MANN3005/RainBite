@@ -70,7 +70,7 @@ class Admin extends CI_Controller {
             $this->index();
         }    
         $this->load->view('Admin/header');
-        $this->load->view('Admin/Menu',);
+        $this->load->view('Admin/Menu');
         // $this->load->view('footer');
 
 
