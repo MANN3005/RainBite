@@ -1,0 +1,4 @@
+ALTER TABLE `reviews` ADD `User_Name` VARCHAR(255) NOT NULL AFTER `Id`; 
+ALTER TABLE `reviews` ADD `Time_added` TIMESTAMP(10) NOT NULL AFTER `Rev_Desc`; 
+
+ 

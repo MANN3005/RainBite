@@ -1,6 +1,6 @@
 <link href="<?php echo base_url('assets/css/review.css');?>" rel="stylesheet">
 <main class="bg_gray">
-<form method="post"  action="<?php echo base_url('Review/validation');?>" autocomplete = "off">
+<form method="post"  action="<?php echo base_url('Review');?>" autocomplete = "off">
 		<div class="container margin_60_20">
 		    <div class="row justify-content-center">
 		
