@@ -4,6 +4,10 @@ class Review extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
+        if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 1)
+            {
+                redirect('SignUp');
+            }
         $this->load->model('Review_model');
     }
 
