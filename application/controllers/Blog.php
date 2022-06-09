@@ -14,11 +14,20 @@ class Blog extends CI_Controller {
         $this->load->view('pages/Blog',$data);
         $this->load->view('footer');
 	}
-    public function BlogPost(){
+    public function BlogPost($Id = ' '){
+        $BlogId = $this->input->post('Id');
+        $data=array();
+        $data['Id'] = $Id !='' ? $Id : '';
+        if($Id !=" "){
+        $data['Blog'] = $this->Blog_model->getBlogDetail($Id);
+       
+        }
+
         $this->load->view('header');
-        $this->load->view('pages/BlogPost');
+        $this->load->view('pages/BlogPost', $data);
         $this->load->view('footer');
 	}
+   
     public function AddBlog(){
         $this->form_validation->set_rules('title','Title','trim|required|max_length[40]');
         $this->form_validation->set_rules('message','Message','required');

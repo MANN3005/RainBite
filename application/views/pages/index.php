@@ -292,7 +292,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-center mt-3 d-block d-lg-none"><a href="#0" class="btn_1 medium gradient pulse_bt mt-2">Register Now!</a></p>
+                        <p class="text-center mt-3 d-block d-lg-none"><a href="" class="btn_1 medium gradient pulse_bt mt-2">Register Now!</a></p>
                     </div>
                     <div class="col-lg-5 offset-lg-1 align-self-center">
                         <div class="intro_txt">
@@ -302,7 +302,7 @@
                             </div>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur deserunt.</p>
                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <p><a href="#0" class="btn_1 medium gradient pulse_bt mt-2">Register</a></p>
+                            <p><a href="<?php echo base_url('signup');?>" class="btn_1 medium gradient pulse_bt mt-2">Register</a></p>
                         </div>
                     </div>
                 </div>

@@ -14,4 +14,12 @@
             $query = $this->db->get();
             return $result = $query->result_array();
 	    }
+        public function getBlogDetail($Id)
+        {
+            $this->db->select('Id, Title, Description, Blog_Image_URL, Message, Status, AuthorName, CreatedDate,');
+            $this->db->from('blog');    
+            $this->db->where('Id',$Id);
+            $query = $this->db->get();
+            return $result = $query->result_array();
+        }
 }
