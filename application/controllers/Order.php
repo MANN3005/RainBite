@@ -14,7 +14,7 @@ class Order extends CI_Controller {
         $this->load->view('pages/orderhome', $data);
         $this->load->view('footer');
     }
-    public function orderdetail($Id=' '){  
+    public function OrderDetail($Id=' '){  
         $RestaurantId = $this->input->post('Id');
         $data=array();
         $data['Id'] = $Id !='' ? $Id : '';
@@ -28,7 +28,7 @@ class Order extends CI_Controller {
 
 
     }
-    public function ordersummary(){      
+    public function OrderSummary(){      
         $this->load->view('header');
         $this->load->view('pages/ordersummary');
         $this->load->view('footer');

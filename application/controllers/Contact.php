@@ -13,7 +13,7 @@ class Contact extends CI_Controller {
         $this->load->view('home/footer');
 	}
  
-    public function contactus(){
+    public function ContactUs(){
         $this->form_validation->set_rules('name','Name','required|trim|max_length[40]');
         $this->form_validation->set_rules('email','Email','required|trim|valid_email|max_length[40]');
         $this->form_validation->set_rules('phone_number','PhoneNumber','required|trim|max_length[10]');

@@ -34,7 +34,7 @@
 								</figure>
 								<div class="post_info">
 									<small>Category - <?php echo substr($value['CreatedDate'],0,11); ?></small>
-									<h2><a href="<?php echo base_url().'Blog/BlogPost/'.$value['Id'];?>" class="strip_info"><?php echo isset($value['Title']) && $value['Title'] != '' ? $value['Title'] : ''; ?></a></h2>
+									<h2><a href="<?php echo base_url().'Blog/'.$value['Id'];?>" class="strip_info"><?php echo isset($value['Title']) && $value['Title'] != '' ? $value['Title'] : ''; ?></a></h2>
 									<p><?php echo isset($value['Description']) && $value['Description'] != '' ? $value['Description'] : ''; ?></p>
 									<ul>
 										<li>

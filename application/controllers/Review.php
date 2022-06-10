@@ -13,8 +13,6 @@ class Review extends CI_Controller {
 
     public function index($id=''){
         echo $this->uri->segment('3');
-        // $data=array();
-        // //$data['Id'] = $Id !='' ? $Id : '';
         $this->form_validation->set_rules('food_quality','Food_Quality','required|max_length[10]');
         $this->form_validation->set_rules('service','Service','required|max_length[10]');
         $this->form_validation->set_rules('punctuality','Punctuality','required|max_length[10]');
@@ -31,27 +29,15 @@ class Review extends CI_Controller {
                 'Rev_Title'  => strip_tags($this->input->post('rev_title')),
                 'Rev_Desc'  => strip_tags($this->input->post('rev_desc')),
                 'User_Name' => $_SESSION['user_name'],
-             
-
-               
             );
             $result = $this->Review_model->addreview($insert); 
-            
-              
             redirect('review'); 
         }
-        // else{
-        //     $this->index();
-        // }
-    
-   
-       
-
         $this->load->view('header');
         $this->load->view('pages/review');
         $this->load->view('footer');
 	}
-    public function review(){
+    public function Review(){
         $RestaurantId =  $this->uri->segment('3');
         // $data=array();
         // //$data['Id'] = $Id !='' ? $Id : '';
@@ -71,13 +57,8 @@ class Review extends CI_Controller {
                 'Rev_Title'  => strip_tags($this->input->post('rev_title')),
                 'Rev_Desc'  => strip_tags($this->input->post('rev_desc')),
                 'User_Name' => $_SESSION['user_name'],
-             
-
-               
             );
             $result = $this->Review_model->addreview($insert); 
-            
-              
             redirect('review'); 
         }
         else{

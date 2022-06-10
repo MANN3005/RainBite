@@ -55,7 +55,7 @@
     <div class="modal_header">
         <h3>Sign In</h3>
     </div>
-    <form method="post"  action="<?php echo base_url('Login/validation_fromsignup');?>" autocomplete = "off">
+    <form method="post"  action="<?php echo base_url('Login/ValidationFromSignup');?>" autocomplete = "off">
         <div class="sign-in-wrapper">
         <?php
                 if($this->session->flashdata('error'))

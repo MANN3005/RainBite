@@ -8,7 +8,7 @@ class Home extends CI_Controller {
         $this->load->view('home/footer');
 	}
     
-    public function comingsoon(){
+    public function ComingSoon(){
         // $this->load->view('home/header');
         $this->load->view('pages/comingsoon');
         // $this->load->view('home/footer');

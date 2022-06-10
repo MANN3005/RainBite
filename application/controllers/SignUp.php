@@ -11,7 +11,7 @@ class SignUp extends CI_Controller {
         $this->load->view('pages/signup');
 	}
 
-    public function usersignup(){
+    public function UserSignUp(){
         $this->form_validation->set_rules('name','Name','required|trim|max_length[40]');
         $this->form_validation->set_rules('lastname','LastName','required|trim|max_length[10]');
         $this->form_validation->set_rules('email','Email','required|trim|valid_email|max_length[40]');

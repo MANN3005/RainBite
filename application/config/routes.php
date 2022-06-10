@@ -53,5 +53,14 @@ $route['default_controller'] = 'Home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-// $route['addMembers/(:any)'] = 'Groups/addMembers/$1';
+
+
+$route['Home'] = 'Home';
+$route['ComingSoon'] = 'Home/ComingSoon';
+$route['Admin'] = 'Admin';
+$route['AddRestaurant'] = 'Admin/Listing';
+$route['Order'] = 'Order';
+$route['Blog'] = 'Blog';
+$route['Help'] = 'HelpAndFaq';
+$route['Blog/(:any)'] = 'Blog/BlogPost/$1';
 

@@ -15,7 +15,7 @@ class SubmitRestaurant extends CI_Controller {
         $this->load->view('pages/submitrestaurant');
         $this->load->view('home/footer');
     }
-    public function addrestaurant(){      
+    public function AddRestaurant(){      
         $this->form_validation->set_rules('name','Name','trim|required|max_length[40]');
         $this->form_validation->set_rules('email','Email','required|trim|valid_email|max_length[40]');
         $this->form_validation->set_rules('phone_number','PhoneNumber','trim|required');

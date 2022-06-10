@@ -15,12 +15,12 @@ class Admin extends CI_Controller {
     public function index(){
         $this->load->view('admin/header');
         $this->load->view('admin/index');
-        // $this->load->view('home/footer');
+        $this->load->view('admin/footer');
 	}
-    public function listing(){
+    public function Listing(){
         $this->load->view('admin/header');
         $this->load->view('admin/listing');
-        // $this->load->view('home/footer');
+        $this->load->view('admin/footer');
        
     }
     public function Registration(){
@@ -73,9 +73,9 @@ class Admin extends CI_Controller {
         else{
             $this->index();
         }    
-        $this->load->view('Admin/header');
-        $this->load->view('Admin/Menu');
-        // $this->load->view('footer');
+        $this->load->view('admin/header');
+        $this->load->view('admin/menu');
+        $this->load->view('admin/footer');
 
 
     }

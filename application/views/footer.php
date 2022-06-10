@@ -9,7 +9,7 @@
                         <ul>
                             <li><a href="about.html">About us</a></li>
                             <li><a href="<?php echo base_url('SubmitRestaurant');?>">Add your restaurant</a></li>
-                            <li><a href="<?php echo base_url('HelpAndFaq');?>">Help</a></li>
+                            <li><a href="<?php echo base_url('Help');?>">Help</a></li>
                             <li><a href="<?php echo base_url('Home/comingsoon');?>">Coming Soon</a></li>
                             <li><a href="<?php echo base_url('Blog');?>">Blog</a></li>
                             <li><a href="<?php echo base_url('Contact');?>">Contact Us</a></li>

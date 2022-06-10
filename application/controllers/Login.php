@@ -8,7 +8,7 @@ class Login extends CI_Controller {
             $this->load->helper(array('url'));
         }
 
-            function validation(){
+            function Validation(){
 
             $this->form_validation->set_rules('email','Email','required|trim|valid_email');
             $this->form_validation->set_rules('password','Password','required');
@@ -37,7 +37,7 @@ class Login extends CI_Controller {
             	}
             }
         }
-        function validation_fromsignup(){
+        function ValidationFromSignup(){
 
             $this->form_validation->set_rules('email','Email','required|trim|valid_email');
             $this->form_validation->set_rules('password','Password','required');
@@ -66,7 +66,7 @@ class Login extends CI_Controller {
             	}
             }
         }
-        public function logout()
+        public function Logout()
         {
             $data = $this->session->all_userdata();
             foreach($data as $row => $rows_value)
