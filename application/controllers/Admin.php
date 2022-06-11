@@ -60,6 +60,7 @@ class Admin extends CI_Controller {
         $this->form_validation->set_rules('menu_category','Menu_category','required|trim|max_length[255]');
         $this->form_validation->set_rules('item_name','Item_Name','required|trim|max_length[255]');
         $this->form_validation->set_rules('price','Price','required|trim|max_length[10]');
+        if($_SESSION['role']=='RestaurantAdmin'){
         if($this->form_validation->run()){
             $insert = array(
                 'Restaurant_Id'  =>  ($_SESSION['resto_Id']),
@@ -69,6 +70,7 @@ class Admin extends CI_Controller {
             );
             $result = $this->Order_model->Menu($insert); 
             redirect('Admin/Menu'); 
+        }
         }
         else{
             $this->index();
