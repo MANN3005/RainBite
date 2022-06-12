@@ -138,7 +138,7 @@
 	                                                            </label>
 	                                                        </li>
 	                                                    </ul>
-	                                                    <a href="#0" class="btn_1">Add to cart</a>
+	                                                    <a href="<?php echo base_url('User/AddToCart/'.$value['Id']);?>" class="btn_1">Add to cart</a>
 	                                                </div>
 	                                            </div>
 	                                        </td>
