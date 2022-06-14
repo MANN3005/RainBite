@@ -39,10 +39,13 @@
             $this->db->insert('Menu', $insert);
             return $this->db->insert_id();
         }
+        public function getCartItems(){
+
+        }
 
         public function getRows($proID)
         {
-            $this->db->select('Id, Restaurant_Id, Menu_category, Item_Name,Price');
+            $this->db->select('Id, Restaurant_Id, Item_Name,Price');
             $this->db->from('menu');    
             $this->db->where('Id',$proID);
             $query = $this->db->get();

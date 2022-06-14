@@ -194,7 +194,7 @@
 	                                            <strong>$12.00</strong>
 	                                        </td>
 	                                        <td class="options">
-	                                            <a href="#0"><i class="icon_plus_alt2"></i></a>
+											<a href="<?php echo base_url('User/AddToCart/'.$value['Id']);?>" > <i class="icon_plus_alt2"></i></a>
 	                                        </td>
 	                                    </tr>
 										<?php }}}else{ ?>
@@ -419,11 +419,9 @@
 	                        <!-- /head -->
 	                        <div class="main">
 	                            <ul class="clearfix">
-	                                <li><a href="#0">1x Enchiladas</a><span>$11</span></li>
-	                                <li><a href="#0">2x Burrito</a><span>$14</span></li>
-	                                <li><a href="#0">1x Chicken</a><span>$18</span></li>
-	                                <li><a href="#0">2x Corona Beer</a><span>$9</span></li>
-	                                <li><a href="#0">2x Cheese Cake</a><span>$11</span></li>
+									<?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?>
+	                                <li><a href="#0"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
+	                                <?php }}?>
 	                            </ul>
 	                            <ul class="clearfix">
 	                                <li>Subtotal<span>$56</span></li>
