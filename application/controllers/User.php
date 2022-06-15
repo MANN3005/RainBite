@@ -7,24 +7,29 @@ class User extends CI_Controller {
     }
 
     public function AddToCart($proID){
-        // $cart_products = $this->session->userdata('cart_products');
-        // $cart_products[] = $proID;
-        // $this->session->set_userdata('cart_products', $cart_products);
-        // redirect($_SERVER['HTTP_REFERER']);    
-        $product = $this->Order_model->getRows($proID);
         
+        $product = $this->Order_model->getRows($proID);
+       
         // Add product to the cart
         $data = array(
             'id'    => $product['Id'],
             'qty'    => 1,
             'price'    => $product['Price'],
             'name'    => $product['Item_Name'],
-
+            'preferred_id' => $product['Restaurant_Id'],
         );
+        if ($this->cart->total() == 0){
         $this->cart->insert($data);
-        
+        $_SESSION['cart_restro'] = $product['Restaurant_Id'];
+        }
+        else if($product['Restaurant_Id']== $_SESSION['cart_restro']){
+            
+            $this->cart->insert($data);
+            
+        }
         // Redirect to the cart page
-
+        echo "<pre>";
+        
         redirect('Order/OrderDetail/'.$product['Restaurant_Id']);
     }
   
