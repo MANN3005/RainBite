@@ -104,8 +104,8 @@
 	                                                <div class="dropdown-menu">
 	                                                    <h5>Select an option</h5>
 	                                                    <ul class="clearfix">
-	                                                        <li>
-	                                                            <label class="container_radio">Medium<small>+ $3.30</small>
+															<li>
+	                                                            <!-- <label class="container_radio">Medium<small>+ $3.30</small> -->
 	                                                                <input type="radio" value="option1" name="options_1">
 	                                                                <span class="checkmark"></span>
 	                                                            </label>
@@ -420,7 +420,7 @@
 	                        <div class="main">
 	                            <ul class="clearfix">
 									<?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?>
-	                                <li><a href="#0"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
+	                                <li><a href="<?php echo base_url('User/RemoveCart/'.$item['id']);?>"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
 	                                <?php }}?>
 	                            </ul>
 	                            <ul class="clearfix">
@@ -668,3 +668,8 @@
 	    <!-- /container -->
 	</main>
 	<!-- /main -->
+	<script>
+function myFunction() {
+  document.getElementById("myNumber").stepUp(5);
+}
+</script>

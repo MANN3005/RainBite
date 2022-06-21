@@ -62,5 +62,5 @@ $route['AddRestaurant'] = 'Admin/Listing';
 $route['Order'] = 'Order';
 $route['Blog'] = 'Blog';
 $route['Help'] = 'HelpAndFaq';
-$route['Blog/(:any)'] = 'Blog/BlogPost/$1';
+$route['Blog/(:num)'] = 'Blog/BlogPost/$1';
 

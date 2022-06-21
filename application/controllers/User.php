@@ -32,6 +32,10 @@ class User extends CI_Controller {
         
         redirect('Order/OrderDetail/'.$product['Restaurant_Id']);
     }
+    public function RemoveCart($proId){
+        $remove = $this->cart->remove($proId);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
   
 }
 ?>
