@@ -28,9 +28,9 @@ class User extends CI_Controller {
             
         }
         // Redirect to the cart page
-        echo "<pre>";
+        // echo "<pre>";
         
-        redirect('Order/OrderDetail/'.$product['Restaurant_Id']);
+        redirect($_SERVER['HTTP_REFERER']);
     }
     public function RemoveCart($proId){
         $remove = $this->cart->remove($proId);

@@ -21,7 +21,8 @@ class Order extends CI_Controller {
         if($Id !=" "){
         $data['Order'] = $this->Order_model->getRestaurantDetail($Id);
         $data['Menu'] = $this->Order_model->getRestaurantMenu($Id);
-        }
+        $data['reviews'] = $this->Order_model->getRestaurantReviews($Id);
+    }
         $data['cartItems'] = $this->cart->contents();
         // echo "<pre>";
         // print_r($data);

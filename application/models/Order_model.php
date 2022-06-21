@@ -26,6 +26,14 @@
             $query = $this->db->get();
             return $result = $query->result_array();
         }
+        public function getRestaurantReviews($Id)
+        {
+            $this->db->select('Id, User_Name, Restaurant_Id, Food_Quality, Service, Price, Punctuality, Rev_Title, Rev_Desc, DATE_FORMAT(Time_added, "%b %d %Y ") as Time_added');
+            $this->db->from('reviews');    
+            $this->db->where('Restaurant_Id',$Id);
+            $query = $this->db->get();
+            return $result = $query->result_array();
+        }
         public function getRestaurantMenu($Id)
         {
             $this->db->select('Id, Restaurant_Id, Menu_category, Item_Name,Price');

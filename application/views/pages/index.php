@@ -151,27 +151,45 @@
                     <div class="col-lg-6">
                         <div class="list_home">
                             <ul>
-                                <!-- <li>
+                            <?php if(isset($order) && count($order) > 0){ 
+								$i = 0; 
+                               
+                        
+							foreach ($order as $value) { $i++; 
+                             if ($i>3){ break;}?> 
+                                <li>
                                     <a href="detail-restaurant.html">
                                         <figure>
                                             <img src="img/location_list_placeholder.png" data-src="img/location_list_1.jpg" alt="" class="lazy" width="350" height="233">
                                         </figure>
                                         <div class="score"><strong>9.5</strong></div>
-                                        <em>Italian</em>
-                                        <h3>La Monnalisa</h3>
-                                        <small>8 Patriot Square E2 9NF</small>
+                                        <em></em>
+                                        <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
+                                        <small><?php echo isset($value['Address']) && $value['Address'] != '' ? $value['Address'] : ''; ?></small>
                                         <ul>
                                             <li><span class="ribbon off">-30%</span></li>
                                             <li>Average price $35</li>
                                         </ul>
                                     </a>
-                                </li> -->
+                                </li>
+                                <?php }}
+							else{ ?>
+								<div class="col-lg-12 blog-no-data-div">
+									<p class="blog-data-message">Data not found.</p>
+								</div>
+							<?php } ?>
                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="list_home">
                             <ul>
+                            <?php if(isset($order) && count($order) > 0){ 
+								$j = 3; 
+                               
+                        
+							foreach ($order as $value) { $j++; 
+                             if ($j>6){ break;}?> 
                                 <li>
                                     <a href="detail-restaurant.html">
                                         <figure>
@@ -179,7 +197,7 @@
                                         </figure>
                                         <div class="score"><strong>9.5</strong></div>
                                         <em>Vegetarian</em>
-                                        <h3>Mr. Pepper</h3>
+                                        <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
                                         <small>27 Old Gloucester St, 4563</small>
                                         <ul>
                                             <li><span class="ribbon off">-30%</span></li>
@@ -187,36 +205,12 @@
                                         </ul>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="detail-restaurant.html">
-                                        <figure>
-                                            <img src="img/location_list_placeholder.png" data-src="img/location_list_5.jpg" alt="" class="lazy" width="350" height="233">
-                                        </figure>
-                                        <div class="score"><strong>8.0</strong></div>
-                                        <em>Chinese</em>
-                                        <h3>Dragon Tower</h3>
-                                        <small>22 Hertsmere Rd E14 4ED</small>
-                                        <ul>
-                                            <li><span class="ribbon off">-50%</span></li>
-                                            <li>Average price $35</li>
-                                        </ul>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="detail-restaurant.html">
-                                        <figure>
-                                            <img src="img/location_list_placeholder.png" data-src="img/location_list_6.jpg" alt="" class="lazy" width="350" height="233">
-                                        </figure>
-                                        <div class="score"><strong>8.5</strong></div>
-                                        <em>Pizza - Italian</em>
-                                        <h3>Bella Napoli</h3>
-                                        <small>135 Newtownards Road BT4</small>
-                                        <ul>
-                                            <li><span class="ribbon off">-45%</span></li>
-                                            <li>Average price $25</li>
-                                        </ul>
-                                    </a>
-                                </li>
+                                <?php }}
+							else{ ?>
+								<div class="col-lg-12 blog-no-data-div">
+									<p class="blog-data-message">Data not found.</p>
+								</div>
+							<?php } ?>
                             </ul>
                         </div>
                     </div>
