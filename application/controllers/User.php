@@ -34,6 +34,7 @@ class User extends CI_Controller {
     }
     public function RemoveCart($proId){
         $remove = $this->cart->remove($proId);
+        echo "<pre>";
         redirect($_SERVER['HTTP_REFERER']);
     }
   

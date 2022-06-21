@@ -420,7 +420,7 @@
 	                        <div class="main">
 	                            <ul class="clearfix">
 									<?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?>
-	                                <li><a href="<?php echo base_url('User/RemoveCart/'.$item['id']);?>"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
+	                                <li><a href="<?php echo base_url('User/RemoveCart/'.$item['rowid']);?>"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
 	                                <?php }}?>
 	                            </ul>
 	                            <ul class="clearfix">
