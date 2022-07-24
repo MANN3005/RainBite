@@ -7,7 +7,7 @@
                     <h3 data-target="#collapse_1">Quick Links</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_1">
                         <ul>
-                            <li><a href="about.html">About us</a></li>
+                            <!-- <li><a href="">About us</a></li> -->
                             <li><a href="<?php echo base_url('SubmitRestaurant');?>">Add your restaurant</a></li>
                             <li><a href="<?php echo base_url('Help');?>">Help</a></li>
                             <li><a href="<?php echo base_url('ComingSoon');?>">Coming Soon</a></li
@@ -165,30 +165,7 @@
           typeSpeed: 50
         });
     </script>
-<!-- Autocomplete -->
-<script>
-function initMap() {
-    var input = document.getElementById('autocomplete');
-    var autocomplete = new google.maps.places.Autocomplete(input);
 
-    autocomplete.addListener('place_changed', function() {
-        var place = autocomplete.getPlace();
-        if (!place.geometry) {
-            window.alert("Autocomplete's returned place contains no geometry");
-            return;
-        }
-
-        var address = '';
-        if (place.address_components) {
-            address = [
-                (place.address_components[0] && place.address_components[0].short_name || ''),
-                (place.address_components[1] && place.address_components[1].short_name || ''),
-                (place.address_components[2] && place.address_components[2].short_name || '')
-            ].join(' ');
-        }
-    });
-}
-</script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
 
 </body>

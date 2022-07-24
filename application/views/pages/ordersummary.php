@@ -141,17 +141,24 @@
 		                	</ul>
 		                	<hr>
 		                	<ul class="clearfix">
-		                		<li><a href="#0">1x Enchiladas</a><span>$11</span></li>
-		                		<li><a href="#0">2x Burrito</a><span>$14</span></li>
-		                		<li><a href="#0">1x Chicken</a><span>$18</span></li>
-		                		<li><a href="#0">2x Corona Beer</a><span>$9</span></li>
-		                		<li><a href="#0">2x Cheese Cake</a><span>$11</span></li>
-		                	</ul>
+							<?php $total_amt = 0;
+								$delivery_fee=0;
+								?>
+							<?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?>
+		                		<li><a href="<?php echo base_url('User/RemoveCart/'.$item['rowid']);?>"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
+							<?php  $total_amt+=$item['price']; 
+								if($total_amt==0){
+									$delivery_fee=0;
+								}
+								else{
+												$delivery_fee= 30;}
+						}}?>
+							</ul>
 		                	
 		                	<ul class="clearfix">
-		                		<li>Subtotal<span>$56</span></li>
-		                		<li>Delivery fee<span>$10</span></li>
-		                		<li class="total">Total<span>$66</span></li>
+							<li>Subtotal<span><?php echo $total_amt;?></span></li>
+	                                <li>Delivery fee<span><?php echo $delivery_fee;?></span></li>
+	                                <li class="total">Total<span><?php echo $total_amt + $delivery_fee; ?></span></li>
 		                	</ul>
 		                    <a href="<?php echo base_url('Order/ConfirmOrder');?>" class="btn_1 gradient full-width mb_5">Order Now</a>
 		                    <div class="text-center"><small>Or Call Us at <strong>0432 48432854</strong></small></div>

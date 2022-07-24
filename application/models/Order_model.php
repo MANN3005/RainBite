@@ -47,6 +47,14 @@
             $this->db->insert('Menu', $insert);
             return $this->db->insert_id();
         }
+
+        public function addRating($insert,$rid){
+            $data = array(
+                'Rating' => $insert,
+              );
+              $this->db->where('Id', $rid);
+            $this->db->update('listing', $data);
+        }
         public function getCartItems(){
 
         }

@@ -458,103 +458,27 @@
 	                        <!-- /head -->
 	                        <div class="main">
 	                            <ul class="clearfix">
+								<?php $total_amt = 0;
+								$delivery_fee=0;
+								?>
 									<?php if($this->cart->total_items() > 0){ foreach($cartItems as $item){    ?>
 	                                <li><a href="<?php echo base_url('User/RemoveCart/'.$item['rowid']);?>"><?php echo $item['name'];?></a><span><?php echo $item['price'];?></span></li>
-	                                <?php }}?>
+										
+									<?php $total_amt+=$item['price']; 
+									 
+									if($total_amt==0){
+										$delivery_fee=0;
+									}
+									else{
+													$delivery_fee= 30;}
+							 }}?>
 	                            </ul>
 	                            <ul class="clearfix">
-	                                <li>Subtotal<span>$56</span></li>
-	                                <li>Delivery fee<span>$10</span></li>
-	                                <li class="total">Total<span>$66</span></li>
+	                                <li>Subtotal<span><?php echo $total_amt;?></span></li>
+	                                <li>Delivery fee<span><?php echo $delivery_fee;?></span></li>
+	                                <li class="total">Total<span><?php echo $total_amt + $delivery_fee; ?></span></li>
 	                            </ul>
-	                            <div class="row opt_order">
-	                                <div class="col-6">
-	                                    <label class="container_radio">Delivery
-	                                        <input type="radio" value="option1" name="opt_order" checked>
-	                                        <span class="checkmark"></span>
-	                                    </label>
-	                                </div>
-	                                <div class="col-6">
-	                                    <label class="container_radio">Take away
-	                                        <input type="radio" value="option1" name="opt_order">
-	                                        <span class="checkmark"></span>
-	                                    </label>
-	                                </div>
-	                            </div>
-	                            <div class="dropdown day">
-	                                <a href="#" data-toggle="dropdown">Day <span id="selected_day"></span></a>
-	                                <div class="dropdown-menu">
-	                                    <div class="dropdown-menu-content">
-	                                        <h4>Which day delivered?</h4>
-	                                        <div class="radio_select chose_day">
-	                                            <ul>
-	                                                <li>
-	                                                    <input type="radio" id="day_1" name="day" value="Today">
-	                                                    <label for="day_1">Today<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="day_2" name="day" value="Tomorrow">
-	                                                    <label for="day_2">Tomorrow<em>-40%</em></label>
-	                                                </li>
-	                                            </ul>
-	                                        </div>
-	                                        <!-- /people_select -->
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <!-- /dropdown -->
-	                            <div class="dropdown time">
-	                                <a href="#" data-toggle="dropdown">Time <span id="selected_time"></span></a>
-	                                <div class="dropdown-menu">
-	                                    <div class="dropdown-menu-content">
-	                                        <h4>Lunch</h4>
-	                                        <div class="radio_select add_bottom_15">
-	                                            <ul>
-	                                                <li>
-	                                                    <input type="radio" id="time_1" name="time" value="12.00am">
-	                                                    <label for="time_1">12.00<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_2" name="time" value="08.30pm">
-	                                                    <label for="time_2">12.30<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_3" name="time" value="09.00pm">
-	                                                    <label for="time_3">1.00<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_4" name="time" value="09.30pm">
-	                                                    <label for="time_4">1.30<em>-40%</em></label>
-	                                                </li>
-	                                            </ul>
-	                                        </div>
-	                                        <!-- /time_select -->
-	                                        <h4>Dinner</h4>
-	                                        <div class="radio_select">
-	                                            <ul>
-	                                                <li>
-	                                                    <input type="radio" id="time_5" name="time" value="08.00pm">
-	                                                    <label for="time_1">20.00<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_6" name="time" value="08.30pm">
-	                                                    <label for="time_2">20.30<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_7" name="time" value="09.00pm">
-	                                                    <label for="time_3">21.00<em>-40%</em></label>
-	                                                </li>
-	                                                <li>
-	                                                    <input type="radio" id="time_8" name="time" value="09.30pm">
-	                                                    <label for="time_4">21.30<em>-40%</em></label>
-	                                                </li>
-	                                            </ul>
-	                                        </div>
-	                                        <!-- /time_select -->
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <!-- /dropdown -->
+	                            
 	                            <div class="btn_1_mobile">
 	                                <a href="<?php echo base_url('Order/ordersummary');?>" class="btn_1 gradient full-width mb_5">Order Now</a>
 	                                <div class="text-center"><small>No money charged on this steps</small></div>
@@ -615,7 +539,7 @@
 	                                    <div class="row">
 	                                        <div class="col-xl-10 col-lg-9 col-9">
 	                                            <div class="progress">
-	                                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+	                                                <div class="progress-bar" role="progressbar"  aria-valuenow="<?php echo $total_pun;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $total_pun;?>"></div>
 	                                            </div>
 	                                        </div>
 	                                        <div class="col-xl-2 col-lg-3 col-3"><strong><?php echo $total_pun;?></strong></div>
@@ -689,4 +613,24 @@
 function myFunction() {
   document.getElementById("myNumber").stepUp(5);
 }
+
+</script>
+<script>	
+	var baseURL = "<?php echo base_url();?>";
+	
+	window.onload = function sendData(){
+    $.ajax({
+      url: baseURL + 'Order/Reviewadd',
+	  data: { 
+			Restuarant_Id: <?php echo $Order[0]['Id'];?>,
+            Rating: <?php echo $total;?>,
+		
+          },
+        method: 'POST',
+        dataType: 'json',
+    });
+  }
+  </script>
+
+
 </script>

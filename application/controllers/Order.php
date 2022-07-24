@@ -32,11 +32,12 @@ class Order extends CI_Controller {
 
 
     }
-    public function OrderSummary(){      
-        $this->load->view('header');
-        $this->load->view('pages/ordersummary');
-        $this->load->view('footer');
+    public function OrderSummary(){    
+        $data['cartItems'] = $this->cart->contents();
 
+        $this->load->view('header');
+        $this->load->view('pages/ordersummary',$data);
+        $this->load->view('footer');
 
     }
     public function ConfirmOrder(){      
@@ -46,12 +47,21 @@ class Order extends CI_Controller {
 
 
     }
-    public function Category(){      
-        $Category = $this->input->post('Category');
+    public function Reviewadd(){ 
+        $R_Id = $this->input->post('Restuarant_Id');
+        $Rating = $this->input->post('Rating');
+        
+           
+        $result = $this->Order_model->addRating($R_Id,$Rating);
+
+    }
+    public function Category($Id=' '){      
+        
         $data = array();
-        $data['order'] = $this->Order_model->getbyCategory($Category);
+        $data['Id'] = $Id !='' ? $Id : '';
+        $data['order'] = $this->Order_model->getbyCategory($Id);
         $this->load->view('header');
-        $this->load->view('pages/orderhome',$data,$Category);
+        $this->load->view('pages/orderhome',$data);
         $this->load->view('footer');
 
 

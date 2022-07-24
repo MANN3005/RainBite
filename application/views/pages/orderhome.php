@@ -187,19 +187,18 @@
 					<div class="row">
 						<div class="col-12">
 							<h2 class="title_small">Top Categories</h2>
-							<form method="post" action="<?php echo base_url('Order/Category')?>">
-       	 							
+						
 							<div class="owl-carousel owl-theme categories_carousel_in listing">
 								<div class="item">
 									<figure>
-										<a href="<?php echo base_url('Order/Category');?>"> <img type="submit"  value ="Pizza"  name = "Category" data-src="img/cat_listing_1.jpg" alt="" class="owl-lazy"></a>
-										<a href="<?php echo base_url('Order/Category');?>"><h3>Pizza</h3></a>
+										<img src="img/cat_listing_placeholder.png" data-src="img/cat_listing_2.jpg" alt="" class="owl-lazy"></a>
+										<a href="<?php echo base_url('Order/Category/Pizza');?>"><h3>Pizza</h3></a>
 									</figure>
 								</div>
 								<div class="item">
 									<figure>
 										<img src="img/cat_listing_placeholder.png" data-src="img/cat_listing_2.jpg" alt="" class="owl-lazy"></a>
-										<a href="#0"><h3>Sushi</h3></a>
+										<a href="<?php echo base_url('Order/Category/Punjabi');?>"><h3>Punjabi</h3></a>
 									</figure>
 								</div>
 								<div class="item">
@@ -239,7 +238,7 @@
 									</figure>
 								</div>	
 							</div>
-</form> 
+
 							<!-- /carousel -->
 						</div>
 					</div>

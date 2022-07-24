@@ -162,7 +162,6 @@
                                         <figure>
                                             <img src="img/location_list_placeholder.png" data-src="img/location_list_1.jpg" alt="" class="lazy" width="350" height="233">
                                         </figure>
-                                        <div class="score"><strong>9.5</strong></div>
                                         <em></em>
                                         <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
                                         <small><?php echo isset($value['Address']) && $value['Address'] != '' ? $value['Address'] : ''; ?></small>
@@ -195,7 +194,7 @@
                                         <figure>
                                             <img src="img/location_list_placeholder.png" data-src="img/location_list_4.jpg" alt="" class="lazy" width="350" height="233">
                                         </figure>
-                                        <div class="score"><strong>9.5</strong></div>
+                                       
                                         <em>Vegetarian</em>
                                         <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
                                         <small>27 Old Gloucester St, 4563</small>

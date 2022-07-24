@@ -67,34 +67,8 @@
                 <?php }?>
                 <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){ ?> 
                 <li> 
-                    <div class="dropdown dropdown-cart">
-                        <a href="cart.html" class="cart_bt"><strong>2</strong></a>
-                        
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li>
-                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-1.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
-                                    <strong><span>1x Pizza Napoli</span>$12.00</strong>
-                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
-                                </li>
-                                 <li>
-                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-2.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
-                                    <strong><span>1x Hamburgher Maxi</span>$10.00</strong>
-                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
-                                </li>
-                                 <li>
-                                    <figure><img src="<?php echo base_url('assets/img/menu-thumb-placeholder.jpg');?>" data-src="<?php echo base_url('assets/img/menu-thumb-3.jpg');?>" alt="" width="50" height="50" class="lazy"></figure>
-                                    <strong><span>1x Red Wine Bottle</span>$20.00</strong>
-                                    <a href="#0" class="action"><i class="icon_trash_alt"></i></a>
-                                </li>
-                            </ul>
-                            <div class="total_drop">
-                                <div class="clearfix add_bottom_15"><strong>Total</strong><span>$32.00</span></div>
-                                <a href="order.html" class="btn_1 outline">View Cart</a><a href="order.html" class="btn_1">Checkout</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /dropdown-cart-->
+                    <a href="<?php echo base_url('Order/ordersummary');?>"><strong class="icon_cart_alt" ></strong></a>
+
                 </li><?php }?>
 			</ul>
 	        <!-- /top_menu -->
