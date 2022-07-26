@@ -160,7 +160,7 @@
                                 <li>
                                     <a href="detail-restaurant.html">
                                         <figure>
-                                            <img src="img/location_list_placeholder.png" data-src="img/location_list_1.jpg" alt="" class="lazy" width="350" height="233">
+                                            <img src="<?php echo base_url('assets/img/location_list_placeholder.png');?>" data-src="assets/img/location_list_1.jpg" alt="" class="lazy" width="350" height="233">
                                         </figure>
                                         <em></em>
                                         <h3><?php echo isset($value['R_Name']) && $value['R_Name'] != '' ? $value['R_Name'] : ''; ?></h3>
@@ -192,7 +192,7 @@
                                 <li>
                                     <a href="detail-restaurant.html">
                                         <figure>
-                                            <img src="img/location_list_placeholder.png" data-src="img/location_list_4.jpg" alt="" class="lazy" width="350" height="233">
+                                            <img src="<?php echo base_url('assets/img/location_list_placeholder.png');?>" data-src="assets/img/location_list_4.jpg" alt="" class="lazy" width="350" height="233">
                                         </figure>
                                        
                                         <em>Vegetarian</em>
